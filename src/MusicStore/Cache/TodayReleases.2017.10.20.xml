@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>New Releases</title>
+    <link>https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss</link>
+    <lastBuildDate>Thu, 19 Oct 2017 01:38:21 -0700</lastBuildDate>
+    <atom:link rel="self" type="application/rss+xml" href="https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss" />
+    <atom:link rel="alternate" type="text/html" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=976405703&amp;app=music" />
+    <description>iTunes Store : New Releases</description>
+    <category>iTunes Store</category>
+    <copyright>Copyright © 2017 Apple Inc. Todos los derechos reservados.</copyright>
+    <item>
+      <title>Mr. Davis - Gucci Mane</title>
+      <category domain="https://itunes.apple.com/us/artist/gucci-mane/id62374520?app=music">Gucci Mane</category>
+      <link>https://itunes.apple.com/us/album/mr-davis/id1271423847?app=music</link>
+      <guid>https://itunes.apple.com/us/album/mr-davis/id1271423847?app=music</guid>
+      <description>Mr. Davis</description>
+      <category>album</category>
+      <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Morning After - dvsn</title>
+      <category domain="https://itunes.apple.com/us/artist/dvsn/id1036952578?app=music">dvsn</category>
+      <link>https://itunes.apple.com/us/album/morning-after/id1287381904?app=music</link>
+      <guid>https://itunes.apple.com/us/album/morning-after/id1287381904?app=music</guid>
+      <description>Morning After</description>
+      <category>album</category>
+      <category>R&amp;B/Soul</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Beautiful Trauma - P!nk</title>
+      <category domain="https://itunes.apple.com/us/artist/p-nk/id4488522?app=music">P!nk</category>
+      <link>https://itunes.apple.com/us/album/beautiful-trauma/id1269268686?app=music</link>
+      <guid>https://itunes.apple.com/us/album/beautiful-trauma/id1269268686?app=music</guid>
+      <description>Beautiful Trauma</description>
+      <category>album</category>
+      <category>Pop</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Just Like You - Single - Louis Tomlinson</title>
+      <category domain="https://itunes.apple.com/us/artist/louis-tomlinson/id471260295?app=music">Louis Tomlinson</category>
+      <link>https://itunes.apple.com/us/album/just-like-you-single/id1293832766?app=music</link>
+      <guid>https://itunes.apple.com/us/album/just-like-you-single/id1293832766?app=music</guid>
+      <description>Just Like You - Single</description>
+      <category>album</category>
+      <category>Pop</category>
+      <category>Music</category>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>7 for 7 - GOT7</title>
+      <category domain="https://itunes.apple.com/us/artist/got7/id802694659?app=music">GOT7</category>
+      <link>https://itunes.apple.com/us/album/7-for-7/id1294538683?app=music</link>
+      <guid>https://itunes.apple.com/us/album/7-for-7/id1294538683?app=music</guid>
+      <description>7 for 7</description>
+      <category>album</category>
+      <category>K-Pop</category>
+      <category>Music</category>
+      <category>Pop</category>
+      <category>Dance</category>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sonder Son - Brent Faiyaz</title>
+      <category domain="https://itunes.apple.com/us/artist/brent-faiyaz/id960127446?app=music">Brent Faiyaz</category>
+      <link>https://itunes.apple.com/us/album/sonder-son/id1287758285?app=music</link>
+      <guid>https://itunes.apple.com/us/album/sonder-son/id1287758285?app=music</guid>
+      <description>Sonder Son</description>
+      <category>album</category>
+      <category>R&amp;B/Soul</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gossip Columns - Marc E. Bassy</title>
+      <category domain="https://itunes.apple.com/us/artist/marc-e-bassy/id899254194?app=music">Marc E. Bassy</category>
+      <link>https://itunes.apple.com/us/album/gossip-columns/id1291077862?app=music</link>
+      <guid>https://itunes.apple.com/us/album/gossip-columns/id1291077862?app=music</guid>
+      <description>Gossip Columns</description>
+      <category>album</category>
+      <category>Pop</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The OOZ - King Krule</title>
+      <category domain="https://itunes.apple.com/us/artist/king-krule/id474544289?app=music">King Krule</category>
+      <link>https://itunes.apple.com/us/album/the-ooz/id1277397848?app=music</link>
+      <guid>https://itunes.apple.com/us/album/the-ooz/id1277397848?app=music</guid>
+      <description>The OOZ</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Saga Continues - Wu-Tang</title>
+      <category domain="https://itunes.apple.com/us/artist/wu-tang/id476222653?app=music">Wu-Tang</category>
+      <link>https://itunes.apple.com/us/album/the-saga-continues/id1285602476?app=music</link>
+      <guid>https://itunes.apple.com/us/album/the-saga-continues/id1285602476?app=music</guid>
+      <description>The Saga Continues</description>
+      <category>album</category>
+      <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MASSEDUCTION - St. Vincent</title>
+      <category domain="https://itunes.apple.com/us/artist/st-vincent/id198271209?app=music">St. Vincent</category>
+      <link>https://itunes.apple.com/us/album/masseduction/id1275220299?app=music</link>
+      <guid>https://itunes.apple.com/us/album/masseduction/id1275220299?app=music</guid>
+      <description>MASSEDUCTION</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Yours - Russell Dickerson</title>
+      <category domain="https://itunes.apple.com/us/artist/russell-dickerson/id415673786?app=music">Russell Dickerson</category>
+      <link>https://itunes.apple.com/us/album/yours/id1240901047?app=music</link>
+      <guid>https://itunes.apple.com/us/album/yours/id1240901047?app=music</guid>
+      <description>Yours</description>
+      <category>album</category>
+      <category>Country</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Humble Beginnings - EP - OMB Peezy</title>
+      <category domain="https://itunes.apple.com/us/artist/omb-peezy/id1191574750?app=music">OMB Peezy</category>
+      <link>https://itunes.apple.com/us/album/humble-beginnings-ep/id1293367814?app=music</link>
+      <guid>https://itunes.apple.com/us/album/humble-beginnings-ep/id1293367814?app=music</guid>
+      <description>Humble Beginnings - EP</description>
+      <category>album</category>
+      <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Adia - Lyrica Anderson</title>
+      <category domain="https://itunes.apple.com/us/artist/lyrica-anderson/id306319865?app=music">Lyrica Anderson</category>
+      <link>https://itunes.apple.com/us/album/adia/id1276377357?app=music</link>
+      <guid>https://itunes.apple.com/us/album/adia/id1276377357?app=music</guid>
+      <description>Adia</description>
+      <category>album</category>
+      <category>R&amp;B/Soul</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Every Little Thing - Carly Pearce</title>
+      <category domain="https://itunes.apple.com/us/artist/carly-pearce/id206684981?app=music">Carly Pearce</category>
+      <link>https://itunes.apple.com/us/album/every-little-thing/id1280168898?app=music</link>
+      <guid>https://itunes.apple.com/us/album/every-little-thing/id1280168898?app=music</guid>
+      <description>Every Little Thing</description>
+      <category>album</category>
+      <category>Country</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Southern Girl City Lights - Jessie James Decker</title>
+      <category domain="https://itunes.apple.com/us/artist/jessie-james-decker/id736319598?app=music">Jessie James Decker</category>
+      <link>https://itunes.apple.com/us/album/southern-girl-city-lights/id1276376282?app=music</link>
+      <guid>https://itunes.apple.com/us/album/southern-girl-city-lights/id1276376282?app=music</guid>
+      <description>Southern Girl City Lights</description>
+      <category>album</category>
+      <category>Country</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Colors - Beck</title>
+      <category domain="https://itunes.apple.com/us/artist/beck/id312095?app=music">Beck</category>
+      <link>https://itunes.apple.com/us/album/colors/id1273064244?app=music</link>
+      <guid>https://itunes.apple.com/us/album/colors/id1273064244?app=music</guid>
+      <description>Colors</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SWIM TEAM - Dirty Heads</title>
+      <category domain="https://itunes.apple.com/us/artist/dirty-heads/id287941061?app=music">Dirty Heads</category>
+      <link>https://itunes.apple.com/us/album/swim-team/id1274749960?app=music</link>
+      <guid>https://itunes.apple.com/us/album/swim-team/id1274749960?app=music</guid>
+      <description>SWIM TEAM</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cats Under the Stars (40th Anniversary Edition) - Jerry Garcia Band</title>
+      <category domain="https://itunes.apple.com/us/artist/jerry-garcia-band/id601468015?app=music">Jerry Garcia Band</category>
+      <link>https://itunes.apple.com/us/album/cats-under-the-stars-40th-anniversary-edition/id1280522177?app=music</link>
+      <guid>https://itunes.apple.com/us/album/cats-under-the-stars-40th-anniversary-edition/id1280522177?app=music</guid>
+      <description>Cats Under the Stars (40th Anniversary Edition)</description>
+      <category>album</category>
+      <category>Rock</category>
+      <category>Music</category>
+    </item>
+    <item>
+      <title>Inside - Digital 21 &amp; Stefan Olsdal</title>
+      <category domain="https://itunes.apple.com/us/artist/digital-21-stefan-olsdal/id1086074438?app=music">Digital 21 &amp; Stefan Olsdal</category>
+      <link>https://itunes.apple.com/us/album/inside/id1269533974?app=music</link>
+      <guid>https://itunes.apple.com/us/album/inside/id1269533974?app=music</guid>
+      <description>Inside</description>
+      <category>album</category>
+      <category>Electronic</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>We Want Smoke (feat. T.I., B.o.B, London Jae, Tokyo Jetz, Translee, Yung Booke, Rara, Young Dro, Trae tha Truth, Brandon Rossi, 5ive Mics &amp; GFMBRYYCE) - Hustle Gang</title>
+      <category domain="https://itunes.apple.com/us/artist/hustle-gang/id320449523?app=music">Hustle Gang</category>
+      <link>https://itunes.apple.com/us/album/we-want-smoke-feat-t-i-b-o-b-london-jae-tokyo-jetz/id1288810322?app=music</link>
+      <guid>https://itunes.apple.com/us/album/we-want-smoke-feat-t-i-b-o-b-london-jae-tokyo-jetz/id1288810322?app=music</guid>
+      <description>We Want Smoke (feat. T.I., B.o.B, London Jae, Tokyo Jetz, Translee, Yung Booke, Rara, Young Dro, Trae tha Truth, Brandon Rossi, 5ive Mics &amp; GFMBRYYCE)</description>
+      <category>album</category>
+      <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Going Grey - The Front Bottoms</title>
+      <category domain="https://itunes.apple.com/us/artist/the-front-bottoms/id322458359?app=music">The Front Bottoms</category>
+      <link>https://itunes.apple.com/us/album/going-grey/id1277932197?app=music</link>
+      <guid>https://itunes.apple.com/us/album/going-grey/id1277932197?app=music</guid>
+      <description>Going Grey</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IWASVERYBAD - IDK</title>
+      <category domain="https://itunes.apple.com/us/artist/idk/id703549373?app=music">IDK</category>
+      <link>https://itunes.apple.com/us/album/iwasverybad/id1289010097?app=music</link>
+      <guid>https://itunes.apple.com/us/album/iwasverybad/id1289010097?app=music</guid>
+      <description>IWASVERYBAD</description>
+      <category>album</category>
+      <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>SF9 3rd Mini Album 'Knights of the Sun' - EP - SF9</title>
+      <category domain="https://itunes.apple.com/us/artist/sf9/id1161961912?app=music">SF9</category>
+      <link>https://itunes.apple.com/us/album/sf9-3rd-mini-album-knights-of-the-sun-ep/id1295622854?app=music</link>
+      <guid>https://itunes.apple.com/us/album/sf9-3rd-mini-album-knights-of-the-sun-ep/id1295622854?app=music</guid>
+      <description>SF9 3rd Mini Album 'Knights of the Sun' - EP</description>
+      <category>album</category>
+      <category>K-Pop</category>
+      <category>Music</category>
+      <category>Pop</category>
+      <category>Dance</category>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Shapeshifter - Knuckle Puck</title>
+      <category domain="https://itunes.apple.com/us/artist/knuckle-puck/id577133451?app=music">Knuckle Puck</category>
+      <link>https://itunes.apple.com/us/album/shapeshifter/id1261417687?app=music</link>
+      <guid>https://itunes.apple.com/us/album/shapeshifter/id1261417687?app=music</guid>
+      <description>Shapeshifter</description>
+      <category>album</category>
+      <category>Rock</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Strange Reign (Deluxe Edition) - Tech N9ne Collabos</title>
+      <category domain="https://itunes.apple.com/us/artist/tech-n9ne-collabos/id257637688?app=music">Tech N9ne Collabos</category>
+      <link>https://itunes.apple.com/us/album/strange-reign-deluxe-edition/id1286922113?app=music</link>
+      <guid>https://itunes.apple.com/us/album/strange-reign-deluxe-edition/id1286922113?app=music</guid>
+      <description>Strange Reign (Deluxe Edition)</description>
+      <category>album</category>
+      <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Bloody Win (Live) - Tye Tribbett</title>
+      <category domain="https://itunes.apple.com/us/artist/tye-tribbett/id52300663?app=music">Tye Tribbett</category>
+      <link>https://itunes.apple.com/us/album/the-bloody-win-live/id1259621207?app=music</link>
+      <guid>https://itunes.apple.com/us/album/the-bloody-win-live/id1259621207?app=music</guid>
+      <description>The Bloody Win (Live)</description>
+      <category>album</category>
+      <category>Gospel</category>
+      <category>Music</category>
+      <category>Christian &amp; Gospel</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>ATLAS - The Score</title>
+      <category domain="https://itunes.apple.com/us/artist/the-score/id869130954?app=music">The Score</category>
+      <link>https://itunes.apple.com/us/album/atlas/id1278445019?app=music</link>
+      <guid>https://itunes.apple.com/us/album/atlas/id1278445019?app=music</guid>
+      <description>ATLAS</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Guerra De Poder - Calibre 50</title>
+      <category domain="https://itunes.apple.com/us/artist/calibre-50/id397237634?app=music">Calibre 50</category>
+      <link>https://itunes.apple.com/us/album/guerra-de-poder/id1280762239?app=music</link>
+      <guid>https://itunes.apple.com/us/album/guerra-de-poder/id1280762239?app=music</guid>
+      <description>Guerra De Poder</description>
+      <category>album</category>
+      <category>Música Mexicana</category>
+      <category>Music</category>
+      <category>Latino</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Lotta Sea Lice - Courtney Barnett &amp; Kurt Vile</title>
+      <category domain="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?cc=us&amp;ids=479276137-274234314&amp;app=music">Courtney Barnett &amp; Kurt Vile</category>
+      <link>https://itunes.apple.com/us/album/lotta-sea-lice/id1271791613?app=music</link>
+      <guid>https://itunes.apple.com/us/album/lotta-sea-lice/id1271791613?app=music</guid>
+      <description>Lotta Sea Lice</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Kidz Bop 36 - KIDZ BOP Kids</title>
+      <category domain="https://itunes.apple.com/us/artist/kidz-bop-kids/id3628117?app=music">KIDZ BOP Kids</category>
+      <link>https://itunes.apple.com/us/album/kidz-bop-36/id1279997663?app=music</link>
+      <guid>https://itunes.apple.com/us/album/kidz-bop-36/id1279997663?app=music</guid>
+      <description>Kidz Bop 36</description>
+      <category>album</category>
+      <category>Children's Music</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>True View - Stick to Your Guns</title>
+      <category domain="https://itunes.apple.com/us/artist/stick-to-your-guns/id218293843?app=music">Stick to Your Guns</category>
+      <link>https://itunes.apple.com/us/album/true-view/id1270235069?app=music</link>
+      <guid>https://itunes.apple.com/us/album/true-view/id1270235069?app=music</guid>
+      <description>True View</description>
+      <category>album</category>
+      <category>Metal</category>
+      <category>Music</category>
+      <category>Rock</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Judas - Fozzy</title>
+      <category domain="https://itunes.apple.com/us/artist/fozzy/id5648447?app=music">Fozzy</category>
+      <link>https://itunes.apple.com/us/album/judas/id1278081275?app=music</link>
+      <guid>https://itunes.apple.com/us/album/judas/id1278081275?app=music</guid>
+      <description>Judas</description>
+      <category>album</category>
+      <category>Metal</category>
+      <category>Music</category>
+      <category>Rock</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Carry Fire - Robert Plant</title>
+      <category domain="https://itunes.apple.com/us/artist/robert-plant/id288062?app=music">Robert Plant</category>
+      <link>https://itunes.apple.com/us/album/carry-fire/id1271375912?app=music</link>
+      <guid>https://itunes.apple.com/us/album/carry-fire/id1271375912?app=music</guid>
+      <description>Carry Fire</description>
+      <category>album</category>
+      <category>Rock</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ogilala - William Patrick Corgan</title>
+      <category domain="https://itunes.apple.com/us/artist/william-patrick-corgan/id265522358?app=music">William Patrick Corgan</category>
+      <link>https://itunes.apple.com/us/album/ogilala/id1271228356?app=music</link>
+      <guid>https://itunes.apple.com/us/album/ogilala/id1271228356?app=music</guid>
+      <description>Ogilala</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>So Much for Good Luck - EP - Deante' Hitchcock</title>
+      <category domain="https://itunes.apple.com/us/artist/deante-hitchcock/id1138908294?app=music">Deante' Hitchcock</category>
+      <link>https://itunes.apple.com/us/album/so-much-for-good-luck-ep/id1295174383?app=music</link>
+      <guid>https://itunes.apple.com/us/album/so-much-for-good-luck-ep/id1295174383?app=music</guid>
+      <description>So Much for Good Luck - EP</description>
+      <category>album</category>
+      <category>R&amp;B/Soul</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Great Heights &amp; Nosedives - ROAM</title>
+      <category domain="https://itunes.apple.com/us/artist/roam/id932156260?app=music">ROAM</category>
+      <link>https://itunes.apple.com/us/album/great-heights-nosedives/id1270970229?app=music</link>
+      <guid>https://itunes.apple.com/us/album/great-heights-nosedives/id1270970229?app=music</guid>
+      <description>Great Heights &amp; Nosedives</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <category>Rock</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Disomus - Through the Eyes of the Dead</title>
+      <category domain="https://itunes.apple.com/us/artist/through-the-eyes-of-the-dead/id59781107?app=music">Through the Eyes of the Dead</category>
+      <link>https://itunes.apple.com/us/album/disomus/id1270120075?app=music</link>
+      <guid>https://itunes.apple.com/us/album/disomus/id1270120075?app=music</guid>
+      <description>Disomus</description>
+      <category>album</category>
+      <category>Metal</category>
+      <category>Music</category>
+      <category>Rock</category>
+      <category>Hard Rock</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Humans (Album Made In 24 Hours) - Spose</title>
+      <category domain="https://itunes.apple.com/us/artist/spose/id278375076?app=music">Spose</category>
+      <link>https://itunes.apple.com/us/album/humans-album-made-in-24-hours/id1295758323?app=music</link>
+      <guid>https://itunes.apple.com/us/album/humans-album-made-in-24-hours/id1295758323?app=music</guid>
+      <description>Humans (Album Made In 24 Hours)</description>
+      <category>album</category>
+      <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>There Is No Love In Fluorescent Light - Stars</title>
+      <category domain="https://itunes.apple.com/us/artist/stars/id336944256?app=music">Stars</category>
+      <link>https://itunes.apple.com/us/album/there-is-no-love-in-fluorescent-light/id1267599221?app=music</link>
+      <guid>https://itunes.apple.com/us/album/there-is-no-love-in-fluorescent-light/id1267599221?app=music</guid>
+      <description>There Is No Love In Fluorescent Light</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Simply Cheryl - Cheryl Fortune</title>
+      <category domain="https://itunes.apple.com/us/artist/cheryl-fortune/id561454346?app=music">Cheryl Fortune</category>
+      <link>https://itunes.apple.com/us/album/simply-cheryl/id1281544882?app=music</link>
+      <guid>https://itunes.apple.com/us/album/simply-cheryl/id1281544882?app=music</guid>
+      <description>Simply Cheryl</description>
+      <category>album</category>
+      <category>Christian &amp; Gospel</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>You Can't Stay Here - Iron Chic</title>
+      <category domain="https://itunes.apple.com/us/artist/iron-chic/id301140432?app=music">Iron Chic</category>
+      <link>https://itunes.apple.com/us/album/you-cant-stay-here/id1276793621?app=music</link>
+      <guid>https://itunes.apple.com/us/album/you-cant-stay-here/id1276793621?app=music</guid>
+      <description>You Can't Stay Here</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Make You Bright - EP - Oh, Weatherly</title>
+      <category domain="https://itunes.apple.com/us/artist/oh-weatherly/id900145775?app=music">Oh, Weatherly</category>
+      <link>https://itunes.apple.com/us/album/make-you-bright-ep/id1291601097?app=music</link>
+      <guid>https://itunes.apple.com/us/album/make-you-bright-ep/id1291601097?app=music</guid>
+      <description>Make You Bright - EP</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <category>Rock</category>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Queens of the Breakers - The Barr Brothers</title>
+      <category domain="https://itunes.apple.com/us/artist/the-barr-brothers/id457103843?app=music">The Barr Brothers</category>
+      <link>https://itunes.apple.com/us/album/queens-of-the-breakers/id1255654065?app=music</link>
+      <guid>https://itunes.apple.com/us/album/queens-of-the-breakers/id1255654065?app=music</guid>
+      <description>Queens of the Breakers</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Vulnerable - Kenny Lattimore</title>
+      <category domain="https://itunes.apple.com/us/artist/kenny-lattimore/id72909148?app=music">Kenny Lattimore</category>
+      <link>https://itunes.apple.com/us/album/vulnerable/id1277715629?app=music</link>
+      <guid>https://itunes.apple.com/us/album/vulnerable/id1277715629?app=music</guid>
+      <description>Vulnerable</description>
+      <category>album</category>
+      <category>R&amp;B/Soul</category>
+      <category>Music</category>
+      <category>Pop</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Vicious World - MYCHILDREN MYBRIDE</title>
+      <category domain="https://itunes.apple.com/us/artist/mychildren-mybride/id273875327?app=music">MYCHILDREN MYBRIDE</category>
+      <link>https://itunes.apple.com/us/album/vicious-world/id1273871427?app=music</link>
+      <guid>https://itunes.apple.com/us/album/vicious-world/id1273871427?app=music</guid>
+      <description>Vicious World</description>
+      <category>album</category>
+      <category>Metal</category>
+      <category>Music</category>
+      <category>Rock</category>
+      <category>Hard Rock</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>17 HERO - EP - Morgan Saint</title>
+      <category domain="https://itunes.apple.com/us/artist/morgan-saint/id1267587638?app=music">Morgan Saint</category>
+      <link>https://itunes.apple.com/us/album/17-hero-ep/id1293838959?app=music</link>
+      <guid>https://itunes.apple.com/us/album/17-hero-ep/id1293838959?app=music</guid>
+      <description>17 HERO - EP</description>
+      <category>album</category>
+      <category>Pop</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Light in the Dark (Deluxe Version) - Revolution Saints</title>
+      <category domain="https://itunes.apple.com/us/artist/revolution-saints/id948697194?app=music">Revolution Saints</category>
+      <link>https://itunes.apple.com/us/album/light-in-the-dark-deluxe-version/id1266368757?app=music</link>
+      <guid>https://itunes.apple.com/us/album/light-in-the-dark-deluxe-version/id1266368757?app=music</guid>
+      <description>Light in the Dark (Deluxe Version)</description>
+      <category>album</category>
+      <category>Hard Rock</category>
+      <category>Music</category>
+      <category>Rock</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>We Have This Moment - Gaither Vocal Band</title>
+      <category domain="https://itunes.apple.com/us/artist/gaither-vocal-band/id6526032?app=music">Gaither Vocal Band</category>
+      <link>https://itunes.apple.com/us/album/we-have-this-moment/id1280744354?app=music</link>
+      <guid>https://itunes.apple.com/us/album/we-have-this-moment/id1280744354?app=music</guid>
+      <description>We Have This Moment</description>
+      <category>album</category>
+      <category>Christian &amp; Gospel</category>
+      <category>Music</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Modern Burdens - Tracy Bonham</title>
+      <category domain="https://itunes.apple.com/us/artist/tracy-bonham/id254810?app=music">Tracy Bonham</category>
+      <link>https://itunes.apple.com/us/album/modern-burdens/id1276328307?app=music</link>
+      <guid>https://itunes.apple.com/us/album/modern-burdens/id1276328307?app=music</guid>
+      <description>Modern Burdens</description>
+      <category>album</category>
+      <category>Rock</category>
+      <category>Music</category>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Missing Peace - L.A. Guns</title>
+      <category domain="https://itunes.apple.com/us/artist/l-a-guns/id85679?app=music">L.A. Guns</category>
+      <link>https://itunes.apple.com/us/album/the-missing-peace/id1255227577?app=music</link>
+      <guid>https://itunes.apple.com/us/album/the-missing-peace/id1255227577?app=music</guid>
+      <description>The Missing Peace</description>
+      <category>album</category>
+      <category>Hard Rock</category>
+      <category>Music</category>
+      <category>Rock</category>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
