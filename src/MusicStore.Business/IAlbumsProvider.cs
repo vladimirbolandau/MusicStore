@@ -41,20 +41,19 @@ namespace MusicStore.Models
         }
     }
 
-    public interface IConcertsService
-    {
-        List<Concert> GetConcerts(string artistId);
-    }
+    //public interface IConcertsService
+    //{
+    //    List<Concert> GetConcerts(string artistId);
+    //}
 
-    public class ConcertsService : IConcertsService
-    {
-        public List<Concert> GetConcerts(string artistId)
-        {
+    //public class ConcertsService : IConcertsService
+    //{
+    //    public List<Concert> GetConcerts(string artistId)
+    //    {
+    //        //switch (artistId)
+    //        //    case "sdlfksjd":
 
-            switch (artistId)
-                case "sdlfksjd":
-
-            return new List<>();
-        }
-    }
+    //        return new List<>();
+    //    }
+    //}
 }

@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Xml;
+using System.Web.Configuration;
 
 namespace MusicStore.Models
 {
     public class CacheFile
     {
-        private string direct = @"C:\Users\vbolandau\Documents\Visual Studio 2015\Projects\MusicStore\MusicStore\Cache\";
+        private string direct = WebConfigurationManager.AppSettings["CacheFolderPath"];
         public XmlDocument RecreateXmlFile()
         {
             XmlDocument tempDoc = new XmlDocument();
