@@ -46,6 +46,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MusicStore.Entities\MusicStore.Entities.csproj">
+      <Project>{ABB205D9-8C1E-4C10-B683-E79633552DAE}</Project>
+      <Name>MusicStore.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MusicStore.Repository\MusicStore.Repository.csproj">
       <Project>{ca28a8f2-ed04-424b-9fb8-c8794eee7524}</Project>
       <Name>MusicStore.Repository</Name>

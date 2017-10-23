@@ -8,7 +8,7 @@ namespace MusicStore.Models
     public class AlbumWithConcertDateModel
     {
         List<AlbumViewModel> Albums { get; set; }
-        List<Concerts> Concerts { get; set; }
+        //List<Concerts> Concerts { get; set; }
     }
 
     public class AlbumViewModel

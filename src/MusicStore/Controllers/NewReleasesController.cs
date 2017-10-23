@@ -12,15 +12,9 @@ namespace MusicStore.Controllers
         // GET: NewReleases
         public ActionResult Index()
         {
-            IAlbumsProvider displayList = new XmlAlbumsProvider();
-            displayList.GetDisplaylist();
-            return View(displayList);
-        }
-
-        public ActionResult Index2()
-        {
-            IAlbumsProvider displayList = new XmlAlbumsProvider();
-            return View(displayList);
+            //var displayList = new XmlAlbumsProvider();
+            //displayList.GetDisplaylist();
+            return View();
         }
     }
 }

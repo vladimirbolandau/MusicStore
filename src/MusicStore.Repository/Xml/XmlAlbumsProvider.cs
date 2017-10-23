@@ -6,14 +6,14 @@ using System.Xml;
 
 namespace MusicStore.Models
 {
-    public class XmlAlbumsProvider : IAlbumsProvider
+    public class XmlAlbumsProvider
     {
-        private List<XmlAttr> displayList;
+        private List<AppleNewsXml> displayList;
         public XmlAlbumsProvider()
         {
-            displayList = new List<XmlAttr>();
+            displayList = new List<AppleNewsXml>();
         }
-        public List<XmlAttr> GetDisplaylist()
+        public List<AppleNewsXml> GetDisplaylist()
         {
             CacheFile saveDoc = new CacheFile();
             XmlDocument urlDoc = saveDoc.RecreateXmlFile();
@@ -26,7 +26,7 @@ namespace MusicStore.Models
             XmlElement xRoot = xDoc.DocumentElement;
             foreach (XmlNode xnode in xRoot.SelectNodes("//item"))
             {
-                XmlAttr tempAttr = new XmlAttr();
+                AppleNewsXml tempAttr = new AppleNewsXml();
                 List<string> tempList = new List<string>();
                 foreach (XmlNode childnode in xnode.ChildNodes)
                 {
