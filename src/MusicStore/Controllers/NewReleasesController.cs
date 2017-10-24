@@ -1,4 +1,5 @@
 ﻿using MusicStore.Models;
+using MusicStore.Business;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,10 @@ namespace MusicStore.Controllers
         // GET: NewReleases
         public ActionResult Index()
         {
-            //var displayList = new XmlAlbumsProvider();
-            //displayList.GetDisplaylist();
-            return View();
+            IAlbumsService albumsList = new NewReleasesService();
+            NewReleasesModel release = new NewReleasesModel();
+            List<NewReleasesModel> releaseList = release.GetReleasesList(albumsList.LoadTodayReleases());
+            return View(releaseList);
         }
     }
 }

@@ -51,8 +51,8 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.6.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.6.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.6.2.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.2\lib\Net45\HtmlAgilityPack.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -180,6 +180,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AlbumWithConcertDateModel.cs" />
+    <Compile Include="Models\NewReleasesModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +211,10 @@
     <ProjectReference Include="..\MusicStore.Business\MusicStore.Business.csproj">
       <Project>{f001219e-ff0f-4d01-a37b-efa8ed61b969}</Project>
       <Name>MusicStore.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicStore.Entities\MusicStore.Entities.csproj">
+      <Project>{ABB205D9-8C1E-4C10-B683-E79633552DAE}</Project>
+      <Name>MusicStore.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

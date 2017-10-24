@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<MusicStore.Models.NewReleasesModel>
+
+@{
     ViewBag.Title = "NewReleases";
 }
 
@@ -6,28 +8,18 @@
 
 <table>
     @{
-        foreach (var track in Model.displayList)
+        foreach (var track in Model)
         {
-            WebClient client = new WebClient();
-            string resource = client.DownloadString(track.link);
-            HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
-            html.LoadHtml(resource);
-            var imgDiv = html.DocumentNode.SelectSingleNode("//*[contains(@class,'product-artwork we-artwork--fullwidth we-artwork ember-view')]");
-            var imgSrc = imgDiv.SelectSingleNode("//img/@src");
-            string relativePath = imgSrc.GetAttributeValue("src", "");
-            var albumDiv = html.DocumentNode.SelectSingleNode("//*[contains(@class,'t-hero-headline')]");
-            string albumSrc = albumDiv.InnerText;
             <tr>
-                <td height="80" width="80" align="center"><img src="@relativePath" width="70" height="70" /></td>
+                <td height="80" width="80" align="center"><img src="@track.UrlToAlbumArt" width="70" height="70" /></td>
                 <td>
                     <table>
-                        <tr><td height="20" align="left">@track.category : @track.title</td></tr>
+                        <tr><td height="30" align="left">@track.ArtistName</td></tr>
                         <tr>
-                            <td height="20" align="left">
-                                <a href="@track.link" target="_blank">@albumSrc</a>
+                            <td height="30" align="left">Album : 
+                                <a href="@track.AlbumLink" target="_blank">@track.AlbumName</a>
                             </td>
                         </tr>
-                        <tr><td height="20" align="left">@track.artist</td></tr>
                     </table>
                 </td>
             </tr>
