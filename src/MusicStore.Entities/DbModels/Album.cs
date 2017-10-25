@@ -26,6 +26,7 @@ namespace MusicStore.Entities.DbModels
         public int GenreID { get; set; }
         public Nullable<System.DateTime> DateRelease { get; set; }
         public string AlbumArtUrl { get; set; }
+        public string LinkToiTunes { get; set; }
     
         public virtual Artist Artist { get; set; }
         public virtual Genre Genre { get; set; }

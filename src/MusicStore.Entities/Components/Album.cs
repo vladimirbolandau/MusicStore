@@ -31,7 +31,7 @@ namespace MusicStore.Entities
             GenreName = new Genre(genreName);
             try
             {
-                DateRelease = DateTime.ParseExact(dateRelease, "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'",
+                DateRelease = DateTime.ParseExact(dateRelease, "ddd, dd MMM yyyy HH':'mm':'ss zzz",
                 System.Globalization.CultureInfo.InvariantCulture);
             }
             catch (Exception)

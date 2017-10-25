@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MusicStoreDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MusicStoreDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Albums">
           <Key>
             <PropertyRef Name="AlbumID" />
@@ -15,6 +15,7 @@
           <Property Name="GenreID" Type="int" Nullable="false" />
           <Property Name="DateRelease" Type="datetime" />
           <Property Name="AlbumArtUrl" Type="nvarchar" MaxLength="250" />
+          <Property Name="LinkToiTunes" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Artists">
           <Key>
@@ -92,8 +93,7 @@
             <End Role="Releases" EntitySet="Releases" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MusicStoreDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -110,6 +110,7 @@
           <NavigationProperty Name="Artist" Relationship="Self.FK_Albums_Artists" FromRole="Albums" ToRole="Artists" />
           <NavigationProperty Name="Genre" Relationship="Self.FK_Albums_Genres" FromRole="Albums" ToRole="Genres" />
           <NavigationProperty Name="Releases" Relationship="Self.FK_Releases_Albums" FromRole="Albums" ToRole="Releases" />
+          <Property Name="LinkToiTunes" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Artist">
           <Key>
@@ -199,6 +200,7 @@
           <EntitySetMapping Name="Albums">
             <EntityTypeMapping TypeName="MusicStoreDBModel.Album">
               <MappingFragment StoreEntitySet="Albums">
+                <ScalarProperty Name="LinkToiTunes" ColumnName="LinkToiTunes" />
                 <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ArtistID" ColumnName="ArtistID" />

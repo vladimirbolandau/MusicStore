@@ -5,10 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="13eb0e5152704781b7164e6727631b6a" Name="Diagram1">
-        <EntityTypeShape EntityType="MusicStoreDBModel.Album" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="MusicStoreDBModel.Artist" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MusicStoreDBModel.Genre" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MusicStoreDBModel.Release" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicStoreDBModel.Album" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicStoreDBModel.Artist" Width="1.5" PointX="0.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicStoreDBModel.Genre" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicStoreDBModel.Release" Width="1.5" PointX="5.125" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="MusicStoreDBModel.FK_Albums_Artists" ManuallyRouted="false" />
         <AssociationConnector Association="MusicStoreDBModel.FK_Albums_Genres" ManuallyRouted="false" />
         <AssociationConnector Association="MusicStoreDBModel.FK_Releases_Albums" ManuallyRouted="false" />
