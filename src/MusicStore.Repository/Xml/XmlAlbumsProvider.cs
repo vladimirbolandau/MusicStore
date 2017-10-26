@@ -16,7 +16,7 @@ namespace MusicStore.Models
         public List<AppleNewsXml> GetTodaysReleases()
         {
             CacheFile saveDoc = new CacheFile();
-            XmlDocument urlDoc = saveDoc.RecreateXmlFile();
+            XmlDocument urlDoc = saveDoc.GetXmlFile();
             FillDisplayList(urlDoc);
 
             return displayList;

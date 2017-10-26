@@ -10,12 +10,13 @@ namespace MusicStore.Controllers
 {
     public class NewReleasesController : Controller
     {
+
         // GET: NewReleases
         public ActionResult Index()
         {
-            IAlbumsService albumsList = new NewReleasesService();
+            IAlbumsService albumsProvider = new NewReleasesService();
             NewReleasesModel release = new NewReleasesModel();
-            List<NewReleasesModel> releaseList = release.GetReleasesList(albumsList.LoadTodayReleases());
+            List<NewReleasesModel> releaseList = release.GetReleasesList(albumsProvider.LoadTodayReleases());
             return View(releaseList);
         }
     }

@@ -8,6 +8,7 @@ namespace MusicStore.Models
 {
     public class NewReleasesModel
     {
+
         public string ArtistName { get; }
         public string AlbumName { get; }
         public string UrlToAlbumArt { get; }

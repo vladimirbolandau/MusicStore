@@ -11,7 +11,7 @@ namespace MusicStore.Models
     public class CacheFile
     {
         private string direct = WebConfigurationManager.AppSettings["CacheFolderPath"];
-        public XmlDocument RecreateXmlFile()
+        public XmlDocument GetXmlFile()
         {
             XmlDocument tempDoc = new XmlDocument();
             string path = GetXmlPath(direct);
@@ -27,10 +27,10 @@ namespace MusicStore.Models
             ClearCache(path);
             return tempDoc;
         }
-        private void ClearCache(string exception)
+        private void ClearCache(string exceptFile)
         {
             foreach (var file in Directory.GetFiles(direct))
-                if (file != exception)
+                if (file != exceptFile)
                     File.Delete(file);
         }
         private string GetXmlPath(string direct)
