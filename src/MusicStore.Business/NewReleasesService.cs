@@ -25,7 +25,8 @@ namespace MusicStore.Business
             List<Album> listOfReleases = new List<Album>();
             foreach (var release in todayReleases.GetTodaysReleases())
             {
-                Album tempAlbum = new Album(release.title, release.artist, release.genre, release.date, release.link);
+                Album tempAlbum = new Album(release.title, release.artist,
+                    release.genre, release.date, release.link, release.guid);
                 listOfReleases.Add(tempAlbum);
             }
 

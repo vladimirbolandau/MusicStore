@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Xml;
 using System.Web.Configuration;
+using MusicStore.Repository;
 
 namespace MusicStore.Models
 {
@@ -22,6 +23,7 @@ namespace MusicStore.Models
             catch (Exception)
             {
                 tempDoc.Load("https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss");
+                var appleProvider = new AppleiTunesProvider(tempDoc);
                 tempDoc.Save(path);
             }
             ClearCache(path);

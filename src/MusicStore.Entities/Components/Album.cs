@@ -24,7 +24,8 @@ namespace MusicStore.Entities
             AlbumLink = "No Link";
             AlbumArtUrl = "No URL";
         }
-        public Album(string name, string artistName, string genreName, string dateRelease, string albumLink)
+        public Album(string name, string artistName, string genreName,
+            string dateRelease, string albumLink, string urlLink)
         {
             Name = name;
             ArtistName = new Artist(artistName);
@@ -40,19 +41,7 @@ namespace MusicStore.Entities
             }
             
             AlbumLink = albumLink;
-            AlbumArtUrl = GetAlbumArtUrlFromLink(albumLink);
-        }
-        private string GetAlbumArtUrlFromLink(string link)
-        {
-            WebClient client = new WebClient();
-            string resource = client.DownloadString(link);
-            HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
-            html.LoadHtml(resource);
-            var imgDiv = html.DocumentNode.SelectSingleNode(
-                "//*[contains(@class,'product-artwork we-artwork--fullwidth we-artwork ember-view')]");
-            var imgSrc = imgDiv.SelectSingleNode("//img/@src");
-            string relativePath = imgSrc.GetAttributeValue("src", "");
-            return relativePath;
+            AlbumArtUrl = urlLink;
         }
     }
 }
