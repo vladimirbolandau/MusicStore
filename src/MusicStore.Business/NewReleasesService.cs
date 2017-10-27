@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MusicStore.Entities;
+using MusicStore.Repository;
 
 namespace MusicStore.Business
 {
@@ -20,15 +21,8 @@ namespace MusicStore.Business
         public List<Album> LoadTodayReleases()
         {
             //if cache exists, return list of albums created based on cached file
-            var todayReleases = new XmlAlbumsProvider();
-            //todayReleases.GetTodaysReleases();
-            List<Album> listOfReleases = new List<Album>();
-            foreach (var release in todayReleases.GetTodaysReleases())
-            {
-                Album tempAlbum = new Album(release.title, release.artist,
-                    release.genre, release.date, release.link, release.guid);
-                listOfReleases.Add(tempAlbum);
-            }
+            IReleasesProvider todayReleases = new XmlProvider();
+            List<Album> listOfReleases = todayReleases.GetTodaysReleases();
 
             //if no chache exist:
             //1. GetData from Apple Service.

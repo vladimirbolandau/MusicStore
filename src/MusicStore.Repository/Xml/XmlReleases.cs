@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MusicStore.Models
 {
-    public class AppleNewsXml
+    public class XmlReleases
     {
         public string fullTitle { get; set; }
         public string artistLink { get; set; }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MusicStore.Entities;
+using MusicStore.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,27 +8,34 @@ using System.Xml;
 
 namespace MusicStore.Models
 {
-    public class XmlAlbumsProvider
+    public class XmlProvider : IReleasesProvider
     {
-        private List<AppleNewsXml> displayList;
-        public XmlAlbumsProvider()
+        private List<XmlReleases> displayList;
+        public XmlProvider()
         {
-            displayList = new List<AppleNewsXml>();
+            displayList = new List<XmlReleases>();
         }
-        public List<AppleNewsXml> GetTodaysReleases()
+        public List<Album> GetTodaysReleases()
         {
             CacheFile saveDoc = new CacheFile();
             XmlDocument urlDoc = saveDoc.GetXmlFile();
             FillDisplayList(urlDoc);
 
-            return displayList;
+            List<Album> todayReleases = new List<Album>();
+            foreach (var release in displayList)
+            {
+                Album tempAlbum = new Album(release.title, release.artist,
+                    release.genre, release.date, release.link, release.guid);
+                todayReleases.Add(tempAlbum);
+            }
+            return todayReleases;
         }
         private void FillDisplayList(XmlDocument xDoc)
         {
             XmlElement xRoot = xDoc.DocumentElement;
             foreach (XmlNode xnode in xRoot.SelectNodes("//item"))
             {
-                AppleNewsXml tempAttr = new AppleNewsXml();
+                XmlReleases tempAttr = new XmlReleases();
                 List<string> tempList = new List<string>();
                 foreach (XmlNode childnode in xnode.ChildNodes)
                 {
