@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using MusicStore.Entities;
 using System.Net;
 using MusicStore.Models;
+using Newtonsoft.Json.Linq;
 
 namespace MusicStore.Repository
 {
@@ -30,12 +31,19 @@ namespace MusicStore.Repository
 
         private void ReadJsonFile()
         {
-            CacheFile saveDoc = new CacheFile();
+            var saveDoc = new CacheFile();
             string json = saveDoc.GetJsonFile();
-            JsonFile Jfile = JsonConvert.DeserializeObject<JsonFile>(json);
-            releases = Jfile.feed.results;
 
-            //File.WriteAllText("TodayReleases.2017.10.27.json", data);
+            //JObject o = JObject.Parse(json);
+            //IEnumerable<JToken> temp = o.SelectTokens("feed.results");
+            //releases = JsonConvert.DeserializeObject<JsonReleases>(temp);
+
+            JObject rss = JObject.Parse(json);
+            JArray categories = (JArray)rss["feed"]["results"];
+
+            var Jfile = JsonConvert.DeserializeObject<JsonFile>(json);
+            releases = Jfile.feed.results;
+            
         }
     }
 }
