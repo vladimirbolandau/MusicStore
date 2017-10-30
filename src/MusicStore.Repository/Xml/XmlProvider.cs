@@ -1,12 +1,12 @@
 ﻿using MusicStore.Entities;
-using MusicStore.Repository;
+using MusicStore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Xml;
 
-namespace MusicStore.Models
+namespace MusicStore.Repository
 {
     public class XmlProvider : IReleasesProvider
     {

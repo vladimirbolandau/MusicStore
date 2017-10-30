@@ -21,7 +21,8 @@ namespace MusicStore.Business
         public List<Album> LoadTodayReleases()
         {
             //if cache exists, return list of albums created based on cached file
-            IReleasesProvider todayReleases = new XmlProvider();
+            //IReleasesProvider todayReleases = new XmlProvider();
+            IReleasesProvider todayReleases = new JsonProvider();
             List<Album> listOfReleases = todayReleases.GetTodaysReleases();
 
             //if no chache exist:

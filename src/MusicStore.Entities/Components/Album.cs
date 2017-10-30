@@ -25,7 +25,7 @@ namespace MusicStore.Entities
             AlbumArtUrl = "No URL";
         }
         public Album(string name, string artistName, string genreName,
-            string dateRelease, string albumLink, string urlLink)
+            string dateRelease, string albumLink, string artLink)
         {
             Name = name;
             ArtistName = new Artist(artistName);
@@ -37,11 +37,19 @@ namespace MusicStore.Entities
             }
             catch (Exception)
             {
-                DateRelease = new DateTime();
+                try
+                {
+                    DateRelease = DateTime.ParseExact(dateRelease, "yyyy-MM-dd",
+                        System.Globalization.CultureInfo.InvariantCulture);
+                }
+                catch (Exception)
+                {
+                    DateRelease = new DateTime();
+                }
             }
             
             AlbumLink = albumLink;
-            AlbumArtUrl = urlLink;
+            AlbumArtUrl = artLink;
         }
     }
 }

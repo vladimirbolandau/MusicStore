@@ -7,6 +7,8 @@ using System.IO;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using MusicStore.Entities;
+using System.Net;
+using MusicStore.Models;
 
 namespace MusicStore.Repository
 {
@@ -15,27 +17,25 @@ namespace MusicStore.Repository
         private List<JsonReleases> releases = new List<JsonReleases>();
         public List<Album> GetTodaysReleases()
         {
+            ReadJsonFile();
             List<Album> todayReleases = new List<Album>();
             foreach (var release in releases)
             {
-                var tempRelease = new Album();
-
-                todayReleases.Add(tempRelease);
+                var tempAlbum = new Album(release.name, release.artistName, release.genres[0].name,
+                    release.releaseDate, release.url, release.artworkUrl100);
+                todayReleases.Add(tempAlbum);
             }
             return todayReleases;
         }
 
-        public void ReadJsonFile()
+        private void ReadJsonFile()
         {
-            string JSONstring = File.ReadAllText(
-                "https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.json");
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-            //AppleNewsJson album = ser.Deserialize<AppleNewsJson>(JSONstring);
-            releases = JsonConvert.DeserializeObject<List<JsonReleases>>(JSONstring);
+            CacheFile saveDoc = new CacheFile();
+            string json = saveDoc.GetJsonFile();
+            JsonFile Jfile = JsonConvert.DeserializeObject<JsonFile>(json);
+            releases = Jfile.feed.results;
 
-            //File.WriteAllText("TodayReleases.2017.10.27.json", JSONstring);
-            string data = JsonConvert.SerializeObject(releases);
-            File.WriteAllText("TodayReleases.2017.10.27.json", data);
+            //File.WriteAllText("TodayReleases.2017.10.27.json", data);
         }
     }
 }
