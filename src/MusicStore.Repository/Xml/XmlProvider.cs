@@ -10,15 +10,13 @@ namespace MusicStore.Repository
 {
     public class XmlProvider : IReleasesProvider
     {
-        private List<XmlReleases> displayList;
-        public XmlProvider()
-        {
-            displayList = new List<XmlReleases>();
-        }
+        private List<XmlReleases> displayList = new List<XmlReleases>();
+        private string fileType = "xml";
         public List<Album> GetTodaysReleases()
         {
-            CacheFile saveDoc = new CacheFile();
-            XmlDocument urlDoc = saveDoc.GetXmlFile();
+            var myPath = new FilePath();
+            var urlDoc = new XmlDocument();
+            urlDoc.Load(myPath.GetFilePath(fileType));
             FillDisplayList(urlDoc);
 
             List<Album> todayReleases = new List<Album>();

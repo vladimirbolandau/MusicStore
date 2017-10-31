@@ -12,6 +12,7 @@ namespace MusicStore.Repository
     {
         public AppleiTunesProvider(XmlDocument xmlDoc)
         {
+
             foreach (XmlNode xnode in xmlDoc.SelectNodes("//item"))
             {
                 foreach (XmlNode childnode in xnode.ChildNodes)
@@ -23,10 +24,10 @@ namespace MusicStore.Repository
                 }
             }
         }
-        public string GetAlbumArtUrl(string LinkToAlbum)
+        public string GetAlbumArtUrl(string linkToAlbum)
         {
             WebClient client = new WebClient();
-            string resource = client.DownloadString(LinkToAlbum);
+            string resource = client.DownloadString(linkToAlbum);
             HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
             html.LoadHtml(resource);
             var imgDiv = html.DocumentNode.SelectSingleNode(

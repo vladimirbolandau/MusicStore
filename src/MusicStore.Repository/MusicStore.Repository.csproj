@@ -57,9 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppleiTunesProvider.cs" />
+    <Compile Include="FilePath.cs" />
     <Compile Include="IReleasesProvider.cs" />
     <Compile Include="Json\JsonReleases.cs" />
-    <Compile Include="CacheFile.cs" />
+    <Compile Include="Cache.cs" />
     <Compile Include="Json\JsonProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Xml\XmlProvider.cs" />

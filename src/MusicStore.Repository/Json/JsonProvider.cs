@@ -16,30 +16,32 @@ namespace MusicStore.Repository
     public class JsonProvider : IReleasesProvider
     {
         private List<JsonReleases> releases = new List<JsonReleases>();
+        private string fileType = "json";
         public List<Album> GetTodaysReleases()
         {
             ReadJsonFile();
             List<Album> todayReleases = new List<Album>();
             foreach (var release in releases)
             {
-                var tempAlbum = new Album(release.name, release.artistName, release.genres[0].name,
-                    release.releaseDate, release.url, release.artworkUrl100);
+                var tempAlbum = new Album(release.Name, release.ArtistName, release.Genres[0].Name,
+                    release.ReleaseDate, release.Url, release.ArtworkUrl);
                 todayReleases.Add(tempAlbum);
             }
             return todayReleases;
         }
-
         private void ReadJsonFile()
         {
-            var saveDoc = new CacheFile();
-            string json = saveDoc.GetJsonFile();
+            var myPath = new FilePath();
+            string json = File.ReadAllText(myPath.GetFilePath(fileType));
+            //string json = saveDoc.GetJsonFile();
 
             //JObject o = JObject.Parse(json);
             //IEnumerable<JToken> temp = o.SelectTokens("feed.results");
             //releases = JsonConvert.DeserializeObject<JsonReleases>(temp);
 
-            JObject rss = JObject.Parse(json);
-            JArray categories = (JArray)rss["feed"]["results"];
+            //JObject rss = JObject.Parse(json);
+            //JArray categories = (JArray)rss["feed"]["results"];
+
 
             var Jfile = JsonConvert.DeserializeObject<JsonFile>(json);
             releases = Jfile.feed.results;
