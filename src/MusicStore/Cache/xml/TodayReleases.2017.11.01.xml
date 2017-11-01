@@ -3,12 +3,23 @@
   <channel>
     <title>New Releases</title>
     <link>https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss</link>
-    <lastBuildDate>Mon, 30 Oct 2017 01:39:39 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 31 Oct 2017 02:23:10 -0700</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss" />
     <atom:link rel="alternate" type="text/html" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=976405703&amp;app=music" />
     <description>iTunes Store : New Releases</description>
     <category>iTunes Store</category>
     <copyright>Copyright © 2017 Apple Inc. All Rights Reserved.</copyright>
+    <item>
+      <title>Without Warning - 21 Savage, Offset &amp; Metro Boomin</title>
+      <category domain="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?cc=us&amp;ids=894820464-3973268-670534462&amp;app=music">21 Savage, Offset &amp; Metro Boomin</category>
+      <link>https://itunes.apple.com/us/album/without-warning/id1303426031?app=music</link>
+      <guid>https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/81/5f/84/815f8497-514e-dcaa-8511-401c71f18c99/886446838526.jpg/268x0w.jpg</guid>
+      <description>Without Warning</description>
+      <category>album</category>
+      <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Beach House 3 - Ty Dolla $ign</title>
       <category domain="https://itunes.apple.com/us/artist/ty-dolla-%24ign/id602917745?app=music">Ty Dolla $ign</category>
@@ -206,6 +217,17 @@
       <category>Reggae</category>
       <category>Music</category>
       <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Heartbreak on a Full Moon - Chris Brown</title>
+      <category domain="https://itunes.apple.com/us/artist/chris-brown/id95705522?app=music">Chris Brown</category>
+      <link>https://itunes.apple.com/us/album/heartbreak-on-a-full-moon/id1293916276?app=music</link>
+      <guid>https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/46/3d/7f/463d7fb8-af64-97d4-6542-67d1c83d967d/886446781471.jpg/268x0w.jpg</guid>
+      <description>Heartbreak on a Full Moon</description>
+      <category>album</category>
+      <category>R&amp;B/Soul</category>
+      <category>Music</category>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Slum Lords 2 - K CAMP</title>
@@ -561,29 +583,6 @@
       <category>Music</category>
       <category>Rap</category>
       <pubDate>Fri, 6 Oct 2017 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Morning After - dvsn</title>
-      <category domain="https://itunes.apple.com/us/artist/dvsn/id1036952578?app=music">dvsn</category>
-      <link>https://itunes.apple.com/us/album/morning-after/id1287381904?app=music</link>
-      <guid>https://is3-ssl.mzstatic.com/image/thumb/Music128/v4/fc/92/fb/fc92fb00-344b-6a9a-71f0-86c71a9c264d/093624909323.jpg/268x0w.jpg</guid>
-      <description>Morning After</description>
-      <category>album</category>
-      <category>R&amp;B/Soul</category>
-      <category>Music</category>
-      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>H.E.R. - H.E.R.</title>
-      <category domain="https://itunes.apple.com/us/artist/h-e-r/id123049323?app=music">H.E.R.</category>
-      <link>https://itunes.apple.com/us/album/h-e-r/id1294890052?app=music</link>
-      <guid>https://is2-ssl.mzstatic.com/image/thumb/Music128/v4/eb/fe/49/ebfe49b4-a3f6-3cdf-79d2-ad9cd4e0acb6/886446799513.jpg/268x0w.jpg</guid>
-      <description>H.E.R.</description>
-      <category>album</category>
-      <category>R&amp;B/Soul</category>
-      <category>Music</category>
-      <category>Contemporary R&amp;B</category>
-      <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

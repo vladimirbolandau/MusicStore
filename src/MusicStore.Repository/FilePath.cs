@@ -11,7 +11,7 @@ using System.Xml;
 
 namespace MusicStore.Repository
 {
-    class FilePath
+    public class FilePath
     {
         private string direct = WebConfigurationManager.AppSettings["CacheFolderPath"];
         private string fileName = "TodayReleases." + DateTime.Now.ToString("yyyy.MM.dd");

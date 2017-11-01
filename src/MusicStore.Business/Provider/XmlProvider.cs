@@ -15,9 +15,9 @@ namespace MusicStore.Repository
         public List<Album> GetTodaysReleases()
         {
             var myPath = new FilePath();
-            var urlDoc = new XmlDocument();
-            urlDoc.Load(myPath.GetFilePath(fileType));
-            FillDisplayList(urlDoc);
+            var myXDoc = new XmlDocument();
+            myXDoc.Load(myPath.GetFilePath(fileType));
+            FillDisplayList(myXDoc);
 
             List<Album> todayReleases = new List<Album>();
             foreach (var release in displayList)

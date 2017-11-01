@@ -58,13 +58,10 @@
   <ItemGroup>
     <Compile Include="AppleiTunesProvider.cs" />
     <Compile Include="FilePath.cs" />
-    <Compile Include="IReleasesProvider.cs" />
-    <Compile Include="Json\JsonReleases.cs" />
+    <Compile Include="JsonReleases.cs" />
     <Compile Include="Cache.cs" />
-    <Compile Include="Json\JsonProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Xml\XmlProvider.cs" />
-    <Compile Include="Xml\XmlReleases.cs" />
+    <Compile Include="XmlReleases.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

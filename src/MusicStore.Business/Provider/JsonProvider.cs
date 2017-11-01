@@ -33,19 +33,13 @@ namespace MusicStore.Repository
         {
             var myPath = new FilePath();
             string json = File.ReadAllText(myPath.GetFilePath(fileType));
-            //string json = saveDoc.GetJsonFile();
-
-            //JObject o = JObject.Parse(json);
-            //IEnumerable<JToken> temp = o.SelectTokens("feed.results");
-            //releases = JsonConvert.DeserializeObject<JsonReleases>(temp);
-
-            //JObject rss = JObject.Parse(json);
-            //JArray categories = (JArray)rss["feed"]["results"];
-
-
-            var Jfile = JsonConvert.DeserializeObject<JsonFile>(json);
-            releases = Jfile.feed.results;
-            
+            JObject googleSearch = JObject.Parse(json);
+            List<JToken> results = googleSearch["feed"]["results"].Children().ToList();
+            foreach (var result in results)
+            {
+                var release = result.ToObject<JsonReleases>();
+                releases.Add(release);
+            }
         }
     }
 }
