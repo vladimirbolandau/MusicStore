@@ -7,29 +7,29 @@ using System.Web;
 
 namespace MusicStore.Entities
 {
-    public class Album
+    public class AlbumMS
     {
         public string Name { get; set; }
-        public Artist ArtistName { get; set; }
-        public Genre GenreName { get; set; }
+        public ArtistMS Artist { get; set; }
+        public GenreMS Genre { get; set; }
         public DateTime DateRelease { get; set; }
         public string AlbumLink { get; set; }
         public string AlbumArtUrl { get; set; }
-        public Album()
+        public AlbumMS()
         {
             Name = "No Album";
-            ArtistName = new Artist();
-            GenreName = new Genre();
+            Artist = new ArtistMS();
+            Genre = new GenreMS();
             DateRelease = new DateTime();
             AlbumLink = "No Link";
             AlbumArtUrl = "No URL";
         }
-        public Album(string name, string artistName, string genreName,
+        public AlbumMS(string name, string artistName, string genreName,
             string dateRelease, string albumLink, string artLink)
         {
             Name = name;
-            ArtistName = new Artist(artistName);
-            GenreName = new Genre(genreName);
+            Artist = new ArtistMS(artistName);
+            Genre = new GenreMS(genreName);
             try
             {
                 DateRelease = DateTime.ParseExact(dateRelease, "ddd, dd MMM yyyy HH':'mm':'ss zzz",

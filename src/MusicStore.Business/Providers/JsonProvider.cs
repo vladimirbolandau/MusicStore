@@ -17,13 +17,13 @@ namespace MusicStore.Repository
     {
         private List<JsonReleases> releases = new List<JsonReleases>();
         private string fileType = "json";
-        public List<Album> GetTodaysReleases()
+        public List<AlbumMS> GetTodaysReleases()
         {
             ReadJsonFile();
-            List<Album> todayReleases = new List<Album>();
+            List<AlbumMS> todayReleases = new List<AlbumMS>();
             foreach (var release in releases)
             {
-                var tempAlbum = new Album(release.Name, release.ArtistName, release.Genres[0].Name,
+                var tempAlbum = new AlbumMS(release.Name, release.ArtistName, release.Genres[0].Name,
                     release.ReleaseDate, release.Url, release.ArtworkUrl);
                 todayReleases.Add(tempAlbum);
             }

@@ -30,8 +30,18 @@ namespace MusicStore.Repository
             string resource = client.DownloadString(linkToAlbum);
             HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
             html.LoadHtml(resource);
-            var imgDiv = html.DocumentNode.SelectSingleNode(
-                "//*[contains(@class,'product-artwork we-artwork--fullwidth we-artwork ember-view')]");
+            HtmlAgilityPack.HtmlNode imgDiv = null;
+            try
+            {
+                imgDiv = html.DocumentNode.SelectSingleNode(
+                    "//*[contains(@class,'product-artwork we-artwork--fullwidth we-artwork ember-view')]");
+            }
+            catch (Exception)
+            {
+                imgDiv = html.DocumentNode.SelectSingleNode("//*[contains(@class,'artwork')]");
+            }
+            //var imgDiv = html.DocumentNode.SelectSingleNode(
+            //    "//*[contains(@class,'product-artwork we-artwork--fullwidth we-artwork ember-view')]");
             var imgSrc = imgDiv.SelectSingleNode("//img/@src");
             string AlbumArtUrl = imgSrc.GetAttributeValue("src", "");
             return AlbumArtUrl;

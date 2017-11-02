@@ -7,15 +7,15 @@ namespace MusicStore.Models
 {
     public class XmlReleases
     {
-        public string fullTitle { get; set; }
-        public string artistLink { get; set; }
-        public string artist { get; set; }
-        public string link { get; set; }
-        public string guid { get; set; }
-        public string title { get; set; }
-        public string category { get; set; }
-        public string genre { get; set; }
-        public string format { get; set; }
-        public string date { get; set; }
+        public string FullTitle { get; set; }
+        public string ArtistLink { get; set; }
+        public string Artist { get; set; }
+        public string Link { get; set; }
+        public string Guid { get; set; }
+        public string Title { get; set; }
+        public string Category { get; set; }
+        public string Genre { get; set; }
+        public string Format { get; set; }
+        public string Date { get; set; }
     }
 }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace MusicStore.Entities
 {
-    public class Genre
+    public class GenreMS
     {
         public string Name { get; set; }
-        public Genre()
+        public GenreMS()
         {
             Name = "No genre";
         }
-        public Genre(string name)
+        public GenreMS(string name)
         {
             Name = name;
         }

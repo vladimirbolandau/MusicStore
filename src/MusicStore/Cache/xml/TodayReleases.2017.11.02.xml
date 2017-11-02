@@ -3,7 +3,7 @@
   <channel>
     <title>New Releases</title>
     <link>https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss</link>
-    <lastBuildDate>Tue, 31 Oct 2017 02:23:10 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 1 Nov 2017 01:38:16 -0700</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss" />
     <atom:link rel="alternate" type="text/html" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=976405703&amp;app=music" />
     <description>iTunes Store : New Releases</description>
@@ -107,6 +107,42 @@
       <category>Music</category>
       <category>Soundtrack</category>
       <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The 1st - Willow</title>
+      <category domain="https://itunes.apple.com/us/artist/willow/id400531893?app=music">Willow</category>
+      <link>https://itunes.apple.com/us/album/the-1st/id1299238770?app=music</link>
+      <guid>https://is3-ssl.mzstatic.com/image/thumb/Music128/v4/cc/74/b6/cc74b60a-ceb0-c3c1-249e-eb5bbf10d5fe/UMG_cvrart_00850494008576_01_RGB72_3000x3000_17UM1IM41114.jpg/268x0w.jpg</guid>
+      <description>The 1st</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>twicetagram - TWICE</title>
+      <category domain="https://itunes.apple.com/us/artist/twice/id1203816887?app=music">TWICE</category>
+      <link>https://itunes.apple.com/us/album/twicetagram/id1303321512?app=music</link>
+      <guid>https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/e8/83/01/e8830188-ff85-a4b6-6939-d450cbf1b56a/10-1_20171030_0AM_LIKEY-COVER-PHOTO_3000.jpg/268x0w.jpg</guid>
+      <description>twicetagram</description>
+      <category>album</category>
+      <category>K-Pop</category>
+      <category>Music</category>
+      <category>Pop</category>
+      <category>Dance</category>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Plunge - Fever Ray</title>
+      <category domain="https://itunes.apple.com/us/artist/fever-ray/id298172653?app=music">Fever Ray</category>
+      <link>https://itunes.apple.com/us/album/plunge/id1299148287?app=music</link>
+      <guid>https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/10/77/cf/1077cf24-ac45-98e8-c9bc-d108fa8bc853/724596970157.jpg/268x0w.jpg</guid>
+      <description>Plunge</description>
+      <category>album</category>
+      <category>Alternative</category>
+      <category>Music</category>
+      <category>Electronic</category>
+      <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>4eva Is a Mighty Long Time - Big K.R.I.T.</title>
@@ -217,17 +253,6 @@
       <category>Reggae</category>
       <category>Music</category>
       <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Heartbreak on a Full Moon - Chris Brown</title>
-      <category domain="https://itunes.apple.com/us/artist/chris-brown/id95705522?app=music">Chris Brown</category>
-      <link>https://itunes.apple.com/us/album/heartbreak-on-a-full-moon/id1293916276?app=music</link>
-      <guid>https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/46/3d/7f/463d7fb8-af64-97d4-6542-67d1c83d967d/886446781471.jpg/268x0w.jpg</guid>
-      <description>Heartbreak on a Full Moon</description>
-      <category>album</category>
-      <category>R&amp;B/Soul</category>
-      <category>Music</category>
-      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Slum Lords 2 - K CAMP</title>
@@ -560,29 +585,6 @@
       <category>Hip-Hop/Rap</category>
       <category>Music</category>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>SUPER SLIMEY - Future &amp; Young Thug</title>
-      <category domain="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?cc=us&amp;ids=128050210-81886939&amp;app=music">Future &amp; Young Thug</category>
-      <link>https://itunes.apple.com/us/album/super-slimey/id1298532904?app=music</link>
-      <guid>https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/41/8c/62/418c6261-208a-3c24-6a4c-9ca40fc654ae/886446806112.jpg/268x0w.jpg</guid>
-      <description>SUPER SLIMEY</description>
-      <category>album</category>
-      <category>Hip-Hop/Rap</category>
-      <category>Music</category>
-      <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Lil Pump - Lil Pump</title>
-      <category domain="https://itunes.apple.com/us/artist/lil-pump/id1129587661?app=music">Lil Pump</category>
-      <link>https://itunes.apple.com/us/album/lil-pump/id1292381888?app=music</link>
-      <guid>https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/ee/64/e0/ee64e04b-3921-e87c-5e38-abdb49f69a35/093624910886.jpg/268x0w.jpg</guid>
-      <description>Lil Pump</description>
-      <category>album</category>
-      <category>Hip-Hop/Rap</category>
-      <category>Music</category>
-      <category>Rap</category>
-      <pubDate>Fri, 6 Oct 2017 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
