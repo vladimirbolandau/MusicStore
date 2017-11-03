@@ -9,6 +9,6 @@ namespace MusicStore.Repository
 {
     public interface IReleasesProvider
     {
-        List<AlbumMS> GetTodaysReleases();
+        List<AlbumDto> GetTodaysReleases();
     }
 }

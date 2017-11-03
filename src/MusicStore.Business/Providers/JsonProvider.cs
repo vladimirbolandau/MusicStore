@@ -15,15 +15,14 @@ namespace MusicStore.Repository
 {
     public class JsonProvider : IReleasesProvider
     {
-        private List<JsonReleases> releases = new List<JsonReleases>();
-        private string fileType = "json";
-        public List<AlbumMS> GetTodaysReleases()
+        private List<JsonReleaseDto> releases = new List<JsonReleaseDto>();
+        public List<AlbumDto> GetTodaysReleases()
         {
             ReadJsonFile();
-            List<AlbumMS> todayReleases = new List<AlbumMS>();
+            List<AlbumDto> todayReleases = new List<AlbumDto>();
             foreach (var release in releases)
             {
-                var tempAlbum = new AlbumMS(release.Name, release.ArtistName, release.Genres[0].Name,
+                var tempAlbum = new AlbumDto(release.Name, release.ArtistName, release.Genres[0].Name,
                     release.ReleaseDate, release.Url, release.ArtworkUrl);
                 todayReleases.Add(tempAlbum);
             }
@@ -32,12 +31,12 @@ namespace MusicStore.Repository
         private void ReadJsonFile()
         {
             var myPath = new FilePath();
-            string json = File.ReadAllText(myPath.GetFilePath(fileType));
+            string json = File.ReadAllText(myPath.GetFilePath(DataTransferType.Json));
             JObject googleSearch = JObject.Parse(json);
             List<JToken> results = googleSearch["feed"]["results"].Children().ToList();
             foreach (var result in results)
             {
-                var release = result.ToObject<JsonReleases>();
+                var release = result.ToObject<JsonReleaseDto>();
                 releases.Add(release);
             }
         }

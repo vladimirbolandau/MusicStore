@@ -7,10 +7,11 @@ using System.Xml;
 using System.Web.Configuration;
 using MusicStore.Repository;
 using System.Net;
+using MusicStore.Entities;
 
 namespace MusicStore.Models
 {
-    public class Cache
+    public class CacheRepository
     {
         public void ClearCacheIn(string directory, string exceptFile)
         {
@@ -18,18 +19,18 @@ namespace MusicStore.Models
                 if (file != exceptFile)
                     File.Delete(file);
         }
-        public void UpdateCacheByFile(string type, string path)
+        public void CreateCacheByFile(DataTransferType type, string path)
         {
             switch (type)
             {
-                case "xml":
+                case DataTransferType.Xml:
                     var tempDoc = new XmlDocument();
                     tempDoc.Load(
                         "https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss");
                     var appleProvider = new AppleiTunesProvider(tempDoc);
                     tempDoc.Save(path);
                     break;
-                case "json":
+                case DataTransferType.Json:
                     var json = new WebClient().DownloadString(
                         "https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.json");
                     File.WriteAllText(path, json);

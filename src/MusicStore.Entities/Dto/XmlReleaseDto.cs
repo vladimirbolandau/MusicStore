@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MusicStore.Models
 {
-    public class XmlReleases
+    public class XmlReleaseDto
     {
         public string FullTitle { get; set; }
         public string ArtistLink { get; set; }

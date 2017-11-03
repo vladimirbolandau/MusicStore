@@ -9,8 +9,8 @@ namespace MusicStore.Models
 {
     public interface IAlbumsService
     {
-        List<AlbumMS> LoadTodayReleases();
-        List<AlbumMS> GetByDateReleases(DateTime date);
+        List<AlbumDto> LoadTodayReleases();
+        List<AlbumDto> GetByDateReleases(DateTime date);
     }
 
     //public interface IConcertsService

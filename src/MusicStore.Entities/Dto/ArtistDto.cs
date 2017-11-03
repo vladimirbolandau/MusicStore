@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace MusicStore.Entities
 {
-    public class ArtistMS
+    public class ArtistDto
     {
         public string Name { get; set; }
-        public ArtistMS()
+        public ArtistDto()
         {
             Name = "No name";
         }
-        public ArtistMS(string name)
+        public ArtistDto(string name)
         {
             Name = name;
         }

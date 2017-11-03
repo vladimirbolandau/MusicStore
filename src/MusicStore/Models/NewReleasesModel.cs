@@ -14,14 +14,14 @@ namespace MusicStore.Models
         public string UrlToAlbumArt { get; }
         public string AlbumLink { get; }
         public NewReleasesModel() { }
-        private NewReleasesModel(AlbumMS album)
+        private NewReleasesModel(AlbumDto album)
         {
             ArtistName = album.Artist.Name;
             AlbumName = album.Name;
             UrlToAlbumArt = album.AlbumArtUrl;
             AlbumLink = album.AlbumLink;
         }
-        public List<NewReleasesModel> GetReleasesList(List<AlbumMS> albumsList)
+        public List<NewReleasesModel> GetReleasesList(List<AlbumDto> albumsList)
         {
             List<NewReleasesModel> ReleasesList = new List<NewReleasesModel>();
             foreach (var album in albumsList)

@@ -10,19 +10,19 @@ namespace MusicStore.Repository
 {
     public class XmlProvider : IReleasesProvider
     {
-        private List<XmlReleases> displayList = new List<XmlReleases>();
-        private string fileType = "xml";
-        public List<AlbumMS> GetTodaysReleases()
+        private List<XmlReleaseDto> displayList = new List<XmlReleaseDto>();
+        //private string fileType = "xml";
+        public List<AlbumDto> GetTodaysReleases()
         {
             var myPath = new FilePath();
             var myXDoc = new XmlDocument();
-            myXDoc.Load(myPath.GetFilePath(fileType));
+            myXDoc.Load(myPath.GetFilePath(DataTransferType.Xml));
             FillDisplayList(myXDoc);
 
-            List<AlbumMS> todayReleases = new List<AlbumMS>();
+            List<AlbumDto> todayReleases = new List<AlbumDto>();
             foreach (var release in displayList)
             {
-                AlbumMS tempAlbum = new AlbumMS(release.Title, release.Artist,
+                AlbumDto tempAlbum = new AlbumDto(release.Title, release.Artist,
                     release.Genre, release.Date, release.Link, release.Guid);
                 todayReleases.Add(tempAlbum);
             }
@@ -33,7 +33,7 @@ namespace MusicStore.Repository
             XmlElement xRoot = xDoc.DocumentElement;
             foreach (XmlNode xnode in xRoot.SelectNodes("//item"))
             {
-                XmlReleases tempAttr = new XmlReleases();
+                XmlReleaseDto tempAttr = new XmlReleaseDto();
                 List<string> tempList = new List<string>();
                 foreach (XmlNode childnode in xnode.ChildNodes)
                 {

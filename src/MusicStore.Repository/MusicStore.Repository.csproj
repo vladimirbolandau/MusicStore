@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="HtmlAgilityPack, Version=1.6.3.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.6.3\lib\Net45\HtmlAgilityPack.dll</HintPath>
       <Private>True</Private>
@@ -56,12 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppleiTunesProvider.cs" />
-    <Compile Include="FilePath.cs" />
-    <Compile Include="JsonReleases.cs" />
-    <Compile Include="Cache.cs" />
+    <Compile Include="Infrastructure\AppleiTunesProvider.cs" />
+    <Compile Include="Infrastructure\FilePath.cs" />
+    <Compile Include="CacheRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlReleases.cs" />
+    <Compile Include="ReleasesRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

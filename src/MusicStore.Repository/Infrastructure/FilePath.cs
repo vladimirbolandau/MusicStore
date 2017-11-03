@@ -1,4 +1,5 @@
-﻿using MusicStore.Models;
+﻿using MusicStore.Entities;
+using MusicStore.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,22 +16,21 @@ namespace MusicStore.Repository
     {
         private string direct = WebConfigurationManager.AppSettings["CacheFolderPath"];
         private string fileName = "TodayReleases." + DateTime.Now.ToString("yyyy.MM.dd");
-        public string GetFilePath(string fileType)
+        public string GetFilePath(DataTransferType fileType)
         {
-            string myDirectory = direct + fileType + "\\";
+            string myDirectory = Path.Combine(direct, fileType.ToString().ToLower());
             string path = MakeFilePath(myDirectory, fileType);
-            var myCache = new Cache();
+            var myCache = new CacheRepository();
             if (!File.Exists(path))
             {
-                myCache.UpdateCacheByFile(fileType, path);
+                myCache.CreateCacheByFile(fileType, path);
             }
             myCache.ClearCacheIn(myDirectory, path);
             return path;
         }
-        private string MakeFilePath(string directory, string fileType)
+        private string MakeFilePath(string directory, DataTransferType fileType)
         {
-            string path = directory + fileName + "." + fileType;
-            return path;
+            return Path.Combine(directory, fileName) + "." + fileType.ToString().ToLower();
         }
     }
 }
