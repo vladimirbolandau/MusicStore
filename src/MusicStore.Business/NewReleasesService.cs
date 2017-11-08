@@ -17,8 +17,8 @@ namespace MusicStore.Business
         public List<AlbumDto> LoadTodayReleases()
         {
             var listOfReleases = new List<AlbumDto>();
-            //IReleasesProvider todayReleases = new XmlProvider();
-            IReleasesProvider todayReleases = new JsonProvider();
+            IReleasesProvider todayReleases = new XmlProvider();
+            //IReleasesProvider todayReleases = new JsonProvider();
             listOfReleases = todayReleases.GetTodayAlbums();
 
             var dbSave = new ReleasesRepository();

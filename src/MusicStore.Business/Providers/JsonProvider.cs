@@ -28,6 +28,7 @@ namespace MusicStore.Repository
             }
             return todayReleases;
         }
+
         private void ReadJsonFile()
         {
             var pathToCache = new PathToCacheFile();
