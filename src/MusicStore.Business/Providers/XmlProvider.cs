@@ -1,23 +1,32 @@
-﻿using MusicStore.Entities;
-using MusicStore.Models;
+﻿using MusicStore.Business.Infrastructure;
+using MusicStore.Entities;
+using MusicStore.Entities.Dto;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.IO;
+using System.Web.Configuration;
 using System.Xml;
 
 namespace MusicStore.Repository
 {
     public class XmlProvider : IReleasesProvider
     {
+        private string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
+            DataTransferType.Xml.ToString().ToLower());
+
         private List<XmlReleaseDto> displayList = new List<XmlReleaseDto>();
-        //private string fileType = "xml";
-        public List<AlbumDto> GetTodaysReleases()
+
+        public List<AlbumDto> GetTodayAlbums()
         {
-            var myPath = new FilePath();
-            var myXDoc = new XmlDocument();
-            myXDoc.Load(myPath.GetFilePath(DataTransferType.Xml));
-            FillDisplayList(myXDoc);
+            var pathToCache = new PathToCacheFile();
+            string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
+
+            var cacheRepository = new CacheRepository();
+            cacheRepository.CheckFileExistence(direct, path, DataTransferType.Xml);
+
+            var xmlDoc = new XmlDocument();
+            xmlDoc.Load(path);
+            FillDisplayList(xmlDoc);
 
             List<AlbumDto> todayReleases = new List<AlbumDto>();
             foreach (var release in displayList)
@@ -55,7 +64,7 @@ namespace MusicStore.Repository
                 tempAttr.Format = tempList[7];
                 try
                 {
-                    tempAttr.Date = tempList[8];
+                    tempAttr.Date = tempList[tempList.Count - 1];
                 }
                 catch (Exception)
                 {

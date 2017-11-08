@@ -1,12 +1,7 @@
-﻿using MusicStore.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MusicStore.Entities;
 using MusicStore.Repository;
-using MusicStore.Entities.DbModels;
+using MusicStore.Entities.Dto;
 
 namespace MusicStore.Business
 {
@@ -21,19 +16,14 @@ namespace MusicStore.Business
 
         public List<AlbumDto> LoadTodayReleases()
         {
-            //if cache exists, return list of albums created based on cached file
             var listOfReleases = new List<AlbumDto>();
             //IReleasesProvider todayReleases = new XmlProvider();
             IReleasesProvider todayReleases = new JsonProvider();
-            listOfReleases = todayReleases.GetTodaysReleases();
+            listOfReleases = todayReleases.GetTodayAlbums();
 
             var dbSave = new ReleasesRepository();
             dbSave.SaveToDb(listOfReleases);
 
-            //if no chache exist:
-            //1. GetData from Apple Service.
-            //2. SaveToDb
-            //3. Save to cache file (first iteration - to xml, second - to json)
             return listOfReleases;
         }
     }

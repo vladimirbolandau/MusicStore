@@ -1,14 +1,10 @@
-﻿using MusicStore.Entities;
-using System;
+﻿using MusicStore.Entities.Dto;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicStore.Repository
 {
     public interface IReleasesProvider
     {
-        List<AlbumDto> GetTodaysReleases();
+        List<AlbumDto> GetTodayAlbums();
     }
 }

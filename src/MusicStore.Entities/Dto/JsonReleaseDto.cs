@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MusicStore.Repository
+namespace MusicStore.Entities.Dto
 {
     public class JsonReleaseDto
     {

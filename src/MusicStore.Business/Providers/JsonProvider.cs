@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Web.Script.Serialization;
-using Newtonsoft.Json;
 using MusicStore.Entities;
-using System.Net;
-using MusicStore.Models;
 using Newtonsoft.Json.Linq;
+using MusicStore.Entities.Dto;
+using MusicStore.Business.Infrastructure;
+using System.Web.Configuration;
 
 namespace MusicStore.Repository
 {
     public class JsonProvider : IReleasesProvider
     {
+        private string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
+            DataTransferType.Json.ToString().ToLower());
+
         private List<JsonReleaseDto> releases = new List<JsonReleaseDto>();
-        public List<AlbumDto> GetTodaysReleases()
+
+        public List<AlbumDto> GetTodayAlbums()
         {
             ReadJsonFile();
             List<AlbumDto> todayReleases = new List<AlbumDto>();
@@ -30,8 +30,13 @@ namespace MusicStore.Repository
         }
         private void ReadJsonFile()
         {
-            var myPath = new FilePath();
-            string json = File.ReadAllText(myPath.GetFilePath(DataTransferType.Json));
+            var pathToCache = new PathToCacheFile();
+            string path = pathToCache.GetFilePath(direct, DataTransferType.Json);
+
+            var cacheRepository = new CacheRepository();
+            cacheRepository.CheckFileExistence(direct, path, DataTransferType.Json);
+
+            string json = File.ReadAllText(path);
             JObject googleSearch = JObject.Parse(json);
             List<JToken> results = googleSearch["feed"]["results"].Children().ToList();
             foreach (var result in results)
