@@ -8,7 +8,7 @@ namespace MusicStore.Repository
 {
     public class ReleasesRepository
     {
-        public void SaveToDb(List<AlbumDto> listOfReleases)
+        public void Save(List<AlbumDto> listOfReleases)
         {
             using (var ctx = new MusicStoreDBEntities())
             {

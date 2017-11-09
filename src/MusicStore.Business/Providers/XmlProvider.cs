@@ -1,20 +1,19 @@
 ﻿using MusicStore.Business.Infrastructure;
 using MusicStore.Entities;
 using MusicStore.Entities.Dto;
+using MusicStore.Repository;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web.Configuration;
 using System.Xml;
 
-namespace MusicStore.Repository
+namespace MusicStore.Business.Providers
 {
     public class XmlProvider : IReleasesProvider
     {
         private string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
             DataTransferType.Xml.ToString().ToLower());
-
-        private List<XmlReleaseDto> displayList = new List<XmlReleaseDto>();
 
         public List<AlbumDto> GetTodayAlbums()
         {
@@ -22,29 +21,30 @@ namespace MusicStore.Repository
             string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
 
             var cacheRepository = new CacheRepository();
-            bool fileExist = cacheRepository.CheckFileExistence(direct, path);
-            var xmlDoc = GetXmlFile(fileExist, path);
+            bool fileForTodayExists = cacheRepository.DoesFileForTodayExists(direct, path);
+            var xmlDoc = GetXmlFile(fileForTodayExists, path);
             cacheRepository.ClearCacheIn(direct, path);
 
-            FillDisplayList(xmlDoc);
+            IEnumerable<XmlReleaseDto> xmlReleases = FillDisplayList(xmlDoc);
 
             List<AlbumDto> todayReleases = new List<AlbumDto>();
-            foreach (var release in displayList)
+            foreach (XmlReleaseDto xmlRelease in xmlReleases)
             {
-                AlbumDto tempAlbum = new AlbumDto(release.Title, release.Artist,
-                    release.Genre, release.Date, release.Link, release.Guid);
+                AlbumDto tempAlbum = new AlbumDto(xmlRelease.Title, xmlRelease.Artist,
+                    xmlRelease.Genre, xmlRelease.Date, xmlRelease.Link, xmlRelease.Guid);
                 todayReleases.Add(tempAlbum);
             }
 
-            if (!fileExist)
+            if (!fileForTodayExists)
             {
-                var dbSave = new ReleasesRepository();
-                dbSave.SaveToDb(todayReleases);
+                var releasesRepository = new ReleasesRepository();
+                releasesRepository.Save(todayReleases);
             }
 
             return todayReleases;
         }
-        private void FillDisplayList(XmlDocument xDoc)
+
+        private IEnumerable<XmlReleaseDto> FillDisplayList(XmlDocument xDoc)
         {
             XmlElement xRoot = xDoc.DocumentElement;
             foreach (XmlNode xnode in xRoot.SelectNodes("//item"))
@@ -77,14 +77,15 @@ namespace MusicStore.Repository
                 {
                     tempAttr.Date = "No Date";
                 }
-                displayList.Add(tempAttr);
+                yield return tempAttr;
             }
+            // return displayList;
         }
 
-        private XmlDocument GetXmlFile(bool fileExist, string path)
+        private XmlDocument GetXmlFile(bool fileForTodayExists, string path)
         {
             var xmlDoc = new XmlDocument();
-            if (!fileExist)
+            if (!fileForTodayExists)
             {
                 xmlDoc.Load("https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss");
                 var appleProvider = new AlbumArtForXml();

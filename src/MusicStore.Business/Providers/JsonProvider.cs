@@ -7,61 +7,60 @@ using MusicStore.Entities.Dto;
 using MusicStore.Business.Infrastructure;
 using System.Web.Configuration;
 using System.Net;
+using MusicStore.Repository;
 
-namespace MusicStore.Repository
+namespace MusicStore.Business.Providers
 {
     public class JsonProvider : IReleasesProvider
     {
         private string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
             DataTransferType.Json.ToString().ToLower());
 
-        private List<JsonReleaseDto> releases = new List<JsonReleaseDto>();
-
-        private bool _fileExist;
+        private bool _fileExists;
 
         public List<AlbumDto> GetTodayAlbums()
         {
-            ReadJsonFile();
+            IEnumerable<JsonReleaseDto> jsonReleases = GetJsonReleases();
             List<AlbumDto> todayReleases = new List<AlbumDto>();
-            foreach (var release in releases)
+            foreach (JsonReleaseDto jsonRelease in jsonReleases)
             {
-                var tempAlbum = new AlbumDto(release.Name, release.ArtistName, release.Genres[0].Name,
-                    release.ReleaseDate, release.Url, release.ArtworkUrl);
+                var tempAlbum = new AlbumDto(jsonRelease.Name, jsonRelease.ArtistName, jsonRelease.Genres[0].Name,
+                    jsonRelease.ReleaseDate, jsonRelease.Url, jsonRelease.ArtworkUrl);
                 todayReleases.Add(tempAlbum);
             }
 
-            if (!_fileExist)
+            if (!_fileExists)
             {
                 var dbSave = new ReleasesRepository();
-                dbSave.SaveToDb(todayReleases);
+                dbSave.Save(todayReleases);
             }
 
             return todayReleases;
         }
 
-        private void ReadJsonFile()
+        private IEnumerable<JsonReleaseDto> GetJsonReleases()
         {
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Json);
 
             var cacheRepository = new CacheRepository();
-            _fileExist = cacheRepository.CheckFileExistence(direct, path);
-            string json = GetJsonFile(_fileExist, path);
+            _fileExists = cacheRepository.DoesFileForTodayExists(direct, path);
+            string json = GetJsonFile(_fileExists, path);
             cacheRepository.ClearCacheIn(direct, path);
 
             JObject jsonSearch = JObject.Parse(json);
             List<JToken> results = jsonSearch["feed"]["results"].Children().ToList();
-            foreach (var result in results)
+            foreach (JToken result in results)
             {
                 var release = result.ToObject<JsonReleaseDto>();
-                releases.Add(release);
+                yield return release;
             }
         }
 
-        private string GetJsonFile(bool fileExist, string path)
+        private string GetJsonFile(bool fileExists, string path)
         {
             string json = null;
-            if (!fileExist)
+            if (!fileExists)
             {
                 json = new WebClient()
                     .DownloadString("https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.json");
