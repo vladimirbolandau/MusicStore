@@ -16,13 +16,11 @@ namespace MusicStore.Business
 
         public List<AlbumDto> LoadTodayReleases()
         {
-            var listOfReleases = new List<AlbumDto>();
             IReleasesProvider todayReleases = new XmlProvider();
             //IReleasesProvider todayReleases = new JsonProvider();
-            listOfReleases = todayReleases.GetTodayAlbums();
 
-            var dbSave = new ReleasesRepository();
-            dbSave.SaveToDb(listOfReleases);
+            var listOfReleases = new List<AlbumDto>();
+            listOfReleases = todayReleases.GetTodayAlbums();
 
             return listOfReleases;
         }

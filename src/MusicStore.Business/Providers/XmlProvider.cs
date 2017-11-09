@@ -22,10 +22,10 @@ namespace MusicStore.Repository
             string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
 
             var cacheRepository = new CacheRepository();
-            cacheRepository.CheckFileExistence(direct, path, DataTransferType.Xml);
+            bool fileExist = cacheRepository.CheckFileExistence(direct, path);
+            var xmlDoc = GetXmlFile(fileExist, path);
+            cacheRepository.ClearCacheIn(direct, path);
 
-            var xmlDoc = new XmlDocument();
-            xmlDoc.Load(path);
             FillDisplayList(xmlDoc);
 
             List<AlbumDto> todayReleases = new List<AlbumDto>();
@@ -35,6 +35,13 @@ namespace MusicStore.Repository
                     release.Genre, release.Date, release.Link, release.Guid);
                 todayReleases.Add(tempAlbum);
             }
+
+            if (!fileExist)
+            {
+                var dbSave = new ReleasesRepository();
+                dbSave.SaveToDb(todayReleases);
+            }
+
             return todayReleases;
         }
         private void FillDisplayList(XmlDocument xDoc)
@@ -72,6 +79,23 @@ namespace MusicStore.Repository
                 }
                 displayList.Add(tempAttr);
             }
+        }
+
+        private XmlDocument GetXmlFile(bool fileExist, string path)
+        {
+            var xmlDoc = new XmlDocument();
+            if (!fileExist)
+            {
+                xmlDoc.Load("https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss");
+                var appleProvider = new AlbumArtForXml();
+                appleProvider.AddAlbumArtToXmlDoc(xmlDoc);
+                xmlDoc.Save(path);
+            }
+            else
+            {
+                xmlDoc.Load(path);
+            }
+            return xmlDoc;
         }
     }
 }

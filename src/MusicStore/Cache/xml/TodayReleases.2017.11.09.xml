@@ -3,7 +3,7 @@
   <channel>
     <title>New Releases</title>
     <link>https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss</link>
-    <lastBuildDate>Tue, 7 Nov 2017 01:36:41 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 8 Nov 2017 01:32:26 -0800</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss" />
     <atom:link rel="alternate" type="text/html" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=976405703&amp;app=music" />
     <description>iTunes Store : New Releases</description>
@@ -445,10 +445,10 @@
       <category>album</category>
       <category>Hip-Hop/Rap</category>
       <category>Music</category>
-      <category>Rap</category>
       <category>R&amp;B/Soul</category>
       <category>West Coast Rap</category>
       <category>Contemporary R&amp;B</category>
+      <category>Rap</category>
       <pubDate>Fri, 27 Oct 2017 00:00:00 +0000</pubDate>
     </item>
     <item>

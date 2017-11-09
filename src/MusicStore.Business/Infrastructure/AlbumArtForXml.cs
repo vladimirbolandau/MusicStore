@@ -2,7 +2,7 @@
 using System.Net;
 using System.Xml;
 
-namespace MusicStore.Repository.Infrastructure
+namespace MusicStore.Business.Infrastructure
 {
     public class AlbumArtForXml
     {
