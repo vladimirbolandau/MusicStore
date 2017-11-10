@@ -8,6 +8,7 @@ using MusicStore.Business.Infrastructure;
 using System.Web.Configuration;
 using System.Net;
 using MusicStore.Repository;
+using System.Text;
 
 namespace MusicStore.Business.Providers
 {
@@ -62,8 +63,10 @@ namespace MusicStore.Business.Providers
             string json = null;
             if (!fileExists)
             {
-                json = new WebClient()
+                var jsonWeb = new WebClient()
                     .DownloadString("https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.json");
+                byte[] data = Encoding.Default.GetBytes(jsonWeb);
+                json = Encoding.UTF8.GetString(data);
                 File.WriteAllText(path, json);
             }
             else

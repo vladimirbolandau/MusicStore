@@ -22,10 +22,13 @@ namespace MusicStore.Repository
                     {
                         var dbRelease = new Release() { Date = DateTime.Today };
 
+                        var tempArtist = ctx.Artists
+                                .Where(a => a.Name == release.Artist.Name)
+                                .FirstOrDefault();
+
                         var tempAlbum = ctx.Albums
                             .Where(a => a.Name == release.Name 
-                                && a.DateRelease == release.DateRelease
-                                && a.AlbumArtUrl == release.AlbumArtUrl)
+                                && a.ArtistID == tempArtist.ArtistID)
                             .FirstOrDefault();
                         if (tempAlbum == null)
                         {
@@ -49,9 +52,7 @@ namespace MusicStore.Repository
                                 dbRelease.Album.GenreID = tempGenre.GenreID;
                             }
 
-                            var tempArtist = ctx.Artists
-                                .Where(a => a.Name == release.Artist.Name)
-                                .FirstOrDefault();
+                            
                             if (tempArtist == null)
                             {
                                 dbRelease.Album.Artist = new Artist() { Name = release.Artist.Name };
