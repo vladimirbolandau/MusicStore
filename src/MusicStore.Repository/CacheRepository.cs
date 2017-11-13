@@ -2,9 +2,9 @@
 
 namespace MusicStore.Repository
 {
-    public class CacheRepository
+    public class CacheRepository : ICacheRepository
     {
-        public bool DoesFileForTodayExists(string directory, string path)
+        public bool DoesFileForTodayExists(string path)
         {
             bool existence = true;
             if (!File.Exists(path))

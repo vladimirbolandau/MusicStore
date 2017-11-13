@@ -21,7 +21,7 @@ namespace MusicStore.Business.Providers
             string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
 
             var cacheRepository = new CacheRepository();
-            bool fileForTodayExists = cacheRepository.DoesFileForTodayExists(direct, path);
+            bool fileForTodayExists = cacheRepository.DoesFileForTodayExists(path);
             var xmlDoc = GetXmlFile(fileForTodayExists, path);
             cacheRepository.ClearCacheIn(direct, path);
 

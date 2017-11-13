@@ -60,7 +60,15 @@ namespace MusicStore.Entities.Dto
                         }
                         catch (Exception)
                         {
-                            DateRelease = new DateTime();
+                            try
+                            {
+                                DateRelease = DateTime.ParseExact(dateRelease, "yyyy",
+                                    System.Globalization.CultureInfo.InvariantCulture);
+                            }
+                            catch (Exception)
+                            {
+                                DateRelease = new DateTime();
+                            }
                         }
                     }
                 }

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace MusicStore.Repository
 {
-    public class ReleasesRepository
+    public class ReleasesRepository : IReleasesRepository
     {
         public void Save(List<AlbumDto> listOfReleases)
         {
@@ -26,11 +26,7 @@ namespace MusicStore.Repository
                                 .Where(a => a.Name == release.Artist.Name)
                                 .FirstOrDefault();
 
-                        var tempAlbum = ctx.Albums
-                            .Where(a => a.Name == release.Name 
-                                && a.ArtistID == tempArtist.ArtistID)
-                            .FirstOrDefault();
-                        if (tempAlbum == null)
+                        if (tempArtist == null)
                         {
                             dbRelease.Album = new Album()
                             {
@@ -52,23 +48,43 @@ namespace MusicStore.Repository
                                 dbRelease.Album.GenreID = tempGenre.GenreID;
                             }
 
-                            
-                            if (tempArtist == null)
-                            {
-                                dbRelease.Album.Artist = new Artist() { Name = release.Artist.Name };
-                            }
-                            else
-                            {
-                                dbRelease.Album.ArtistID = tempArtist.ArtistID;
-                            }
+                            dbRelease.Album.Artist = new Artist() { Name = release.Artist.Name };
                         }
                         else
                         {
-                            dbRelease.AlbumID = tempAlbum.AlbumID;
+                            var tempAlbum = ctx.Albums
+                            .Where(a => a.Name == release.Name
+                                && a.ArtistID == tempArtist.ArtistID)
+                            .FirstOrDefault();
+                            if (tempAlbum == null)
+                            {
+                                dbRelease.Album = new Album()
+                                {
+                                    Name = release.Name,
+                                    DateRelease = release.DateRelease,
+                                    AlbumArtUrl = release.AlbumArtUrl,
+                                    LinkToiTunes = release.AlbumLink
+                                };
+
+                                var tempGenre = ctx.Genres
+                                .Where(r => r.Name == release.Genre.Name)
+                                .FirstOrDefault();
+                                if (tempGenre == null)
+                                {
+                                    dbRelease.Album.Genre = new Entities.DbModels.Genre() { Name = release.Genre.Name };
+                                }
+                                else
+                                {
+                                    dbRelease.Album.GenreID = tempGenre.GenreID;
+                                }
+
+                                dbRelease.Album.ArtistID = tempArtist.ArtistID;
+                            }
+                            else
+                            {
+                                dbRelease.AlbumID = tempAlbum.AlbumID;
+                            }
                         }
-
-                        
-
                         ctx.Releases.Add(dbRelease);
                         ctx.SaveChanges();
                     }
