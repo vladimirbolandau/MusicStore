@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicStore.Repository
 {
-    interface ICacheRepository
+    public interface ICacheRepository
     {
         bool DoesFileForTodayExists(string path);
 

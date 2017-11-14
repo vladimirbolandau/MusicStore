@@ -20,7 +20,7 @@ namespace MusicStore.Business.Providers
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
 
-            var cacheRepository = new CacheRepository();
+            ICacheRepository cacheRepository = new CacheRepository();
             bool fileForTodayExists = cacheRepository.DoesFileForTodayExists(path);
             var xmlDoc = GetXmlFile(fileForTodayExists, path);
             cacheRepository.ClearCacheIn(direct, path);
@@ -37,7 +37,7 @@ namespace MusicStore.Business.Providers
 
             if (!fileForTodayExists)
             {
-                var releasesRepository = new ReleasesRepository();
+                IReleasesRepository releasesRepository = new ReleasesRepository();
                 releasesRepository.Save(todayReleases);
             }
 
@@ -66,7 +66,7 @@ namespace MusicStore.Business.Providers
                 tempAttr.Link = tempList[2];
                 tempAttr.Guid = tempList[3];
                 tempAttr.Title = tempList[4];
-                tempAttr.Category = char.ToUpper((tempList[5])[0]) + tempList[5].Substring(1);
+                tempAttr.Category = tempList[5];
                 tempAttr.Genre = tempList[6];
                 tempAttr.Format = tempList[7];
                 try

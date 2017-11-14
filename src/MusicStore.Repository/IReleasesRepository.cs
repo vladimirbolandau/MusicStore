@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MusicStore.Repository
 {
-    interface IReleasesRepository
+    public interface IReleasesRepository
     {
         void Save(List<AlbumDto> listOfReleases);
     }

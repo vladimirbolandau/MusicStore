@@ -32,7 +32,7 @@ namespace MusicStore.Business.Providers
 
             if (!_fileExists)
             {
-                var releasesRepository = new ReleasesRepository();
+                IReleasesRepository releasesRepository = new ReleasesRepository();
                 releasesRepository.Save(todayReleases);
             }
 
@@ -44,7 +44,7 @@ namespace MusicStore.Business.Providers
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Json);
 
-            var cacheRepository = new CacheRepository();
+            ICacheRepository cacheRepository = new CacheRepository();
             _fileExists = cacheRepository.DoesFileForTodayExists(path);
             string json = GetJsonFile(_fileExists, path);
             cacheRepository.ClearCacheIn(direct, path);
