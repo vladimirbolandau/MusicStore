@@ -3,12 +3,12 @@
   <channel>
     <title>New Releases</title>
     <link>https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss</link>
-    <lastBuildDate>Sun, 12 Nov 2017 01:45:53 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Nov 2017 02:19:24 -0800</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss" />
     <atom:link rel="alternate" type="text/html" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=976405703&amp;app=music" />
     <description>iTunes Store : New Releases</description>
     <category>iTunes Store</category>
-    <copyright>Copyright © 2017 Apple Inc. All Rights Reserved.</copyright>
+    <copyright>Copyright © 2017 Apple Inc. Alle rettigheter forbeholdes.</copyright>
     <item>
       <title>Laugh Now, Fly Later - Wiz Khalifa</title>
       <category domain="https://itunes.apple.com/us/artist/wiz-khalifa/201714418?app=music">Wiz Khalifa</category>
@@ -17,6 +17,17 @@
       <description>Laugh Now, Fly Later</description>
       <category>album</category>
       <category>Hip-Hop/Rap</category>
+      <category>Music</category>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From the Fires - Greta Van Fleet</title>
+      <category domain="https://itunes.apple.com/us/artist/greta-van-fleet/646178956?app=music">Greta Van Fleet</category>
+      <link>https://itunes.apple.com/us/album/from-the-fires/1306096824?app=music</link>
+      <guid>https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/cd/63/e3/cd63e386-bd35-46cc-ffa4-9b4426596537/UMG_cvrart_00602567126010_01_RGB72_3000x3000_17UM1IM39373.jpg/268x0w.jpg</guid>
+      <description>From the Fires</description>
+      <category>album</category>
+      <category>Rock</category>
       <category>Music</category>
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
     </item>
@@ -215,17 +226,6 @@
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>From the Fires - Greta Van Fleet</title>
-      <category domain="https://itunes.apple.com/us/artist/greta-van-fleet/646178956?app=music">Greta Van Fleet</category>
-      <link>https://itunes.apple.com/us/album/from-the-fires/1306096824?app=music</link>
-      <guid>https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/cd/63/e3/cd63e386-bd35-46cc-ffa4-9b4426596537/UMG_cvrart_00602567126010_01_RGB72_3000x3000_17UM1IM39373.jpg/268x0w.jpg</guid>
-      <description>From the Fires</description>
-      <category>album</category>
-      <category>Rock</category>
-      <category>Music</category>
-      <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Good Ole Days - Tracy Lawrence</title>
       <category domain="https://itunes.apple.com/us/artist/tracy-lawrence/150022?app=music">Tracy Lawrence</category>
       <link>https://itunes.apple.com/us/album/good-ole-days/1262601043?app=music</link>
@@ -233,6 +233,17 @@
       <description>Good Ole Days</description>
       <category>album</category>
       <category>Country</category>
+      <category>Music</category>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Coco (Original Motion Picture Soundtrack) - Various Artists</title>
+      <category domain="https://itunes.apple.com/us/artist/various-artists/36270?app=music">Various Artists</category>
+      <link>https://itunes.apple.com/us/album/coco-original-motion-picture-soundtrack/1305458973?app=music</link>
+      <guid>https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/89/63/8b/89638bbc-4abd-35a1-591c-924d9f9a059b/UMG_cvrart_00050087379735_01_RGB72_3000x3000_17UM1IM42577.jpg/268x0w.jpg</guid>
+      <description>Coco (Original Motion Picture Soundtrack)</description>
+      <category>album</category>
+      <category>Soundtrack</category>
       <category>Music</category>
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
     </item>
@@ -313,6 +324,7 @@
       <category>album</category>
       <category>Country</category>
       <category>Music</category>
+      <category>Rock</category>
       <category>Singer/Songwriter</category>
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
     </item>
@@ -503,11 +515,11 @@
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Monstercat Uncaged Vol. 3 - Various Artists</title>
+      <title>Monstercat Uncaged, Vol. 3 - Various Artists</title>
       <category domain="https://itunes.apple.com/us/artist/various-artists/581578189?app=music">Various Artists</category>
       <link>https://itunes.apple.com/us/album/monstercat-uncaged-vol-3/1303784502?app=music</link>
       <guid>https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/43/8e/4f/438e4f7a-41c0-8f40-f719-66972e2c3234/Monstercat_Uncaged_-_Vol._3_Art.jpg/268x0w.jpg</guid>
-      <description>Monstercat Uncaged Vol. 3</description>
+      <description>Monstercat Uncaged, Vol. 3</description>
       <category>album</category>
       <category>Dance</category>
       <category>Music</category>
@@ -568,18 +580,6 @@
       <category>album</category>
       <category>Hip-Hop/Rap</category>
       <category>Music</category>
-      <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>The Dark Element (feat. Anette Olzon &amp; Jani Liimatainen) - The Dark Element</title>
-      <category domain="https://itunes.apple.com/us/artist/the-dark-element/1271719224?app=music">The Dark Element</category>
-      <link>https://itunes.apple.com/us/album/the-dark-element-feat-anette-olzon-jani-liimatainen/1271719223?app=music</link>
-      <guid>https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/97/91/b8/9791b8d1-9db5-f790-0634-3adda8cb0fc1/191773620936.jpg/268x0w.jpg</guid>
-      <description>The Dark Element (feat. Anette Olzon &amp; Jani Liimatainen)</description>
-      <category>album</category>
-      <category>Metal</category>
-      <category>Music</category>
-      <category>Rock</category>
       <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
     </item>
   </channel>
