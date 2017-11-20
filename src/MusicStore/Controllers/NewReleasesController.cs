@@ -7,12 +7,19 @@ namespace MusicStore.Controllers
 {
     public class NewReleasesController : Controller
     {
+        private readonly IAlbumsService _albumsService;
+
+        //public NewReleasesController(IAlbumsService albumsService)
+        //{
+        //    _albumsService = albumsService;
+        //}
+
         // GET: NewReleases
         public ActionResult Index()
         {
-            IAlbumsService albumsProvider = new NewReleasesService();
+            //IAlbumsService _albumsService = new NewReleasesService();
             var release = new NewReleasesModel();
-            List<NewReleasesModel> releaseList = release.GetReleasesList(albumsProvider.LoadTodayReleases());
+            List<NewReleasesModel> releaseList = release.GetReleasesList(_albumsService.LoadTodayReleases());
             return View(releaseList);
         }
     }

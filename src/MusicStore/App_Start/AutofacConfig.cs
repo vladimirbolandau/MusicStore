@@ -3,6 +3,9 @@ using Autofac.Integration.Mvc;
 using System.Web.Mvc;
 using System;
 using MusicStore.Business;
+using MusicStore.Business.Providers;
+using MusicStore.Repository;
+using System.Reflection;
 
 namespace MusicStore.App_Start
 {
@@ -38,7 +41,17 @@ namespace MusicStore.App_Start
 
         private static void SetupDependencies(ContainerBuilder builder)
         {
+            builder.RegisterControllers(Assembly.GetExecutingAssembly());
+
+            //builder.RegisterInstance(new NewReleasesService()).As<IAlbumsService>();
+
             builder.RegisterType<NewReleasesService>().As<IAlbumsService>();
+            //builder.RegisterType<JsonProvider>().As<IReleasesProvider>();
+            //builder.RegisterType<CacheRepository>().As<ICacheRepository>();
+            //builder.RegisterType<ReleasesRepository>().As<IReleasesRepository>();
+
+            IContainer container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
     }
 }
