@@ -32,6 +32,9 @@ namespace MusicStore.App_Start
             // OPTIONAL: Enable property injection into action filters.
             builder.RegisterFilterProvider();
 
+            builder.RegisterControllers(Assembly.GetExecutingAssembly());
+            builder.RegisterModelBinderProvider();
+
             SetupDependencies(builder);
 
             // Set the dependency resolver to be Autofac.
@@ -41,17 +44,14 @@ namespace MusicStore.App_Start
 
         private static void SetupDependencies(ContainerBuilder builder)
         {
-            builder.RegisterControllers(Assembly.GetExecutingAssembly());
-
+            
             //builder.RegisterInstance(new NewReleasesService()).As<IAlbumsService>();
 
             builder.RegisterType<NewReleasesService>().As<IAlbumsService>();
             //builder.RegisterType<JsonProvider>().As<IReleasesProvider>();
             //builder.RegisterType<CacheRepository>().As<ICacheRepository>();
             //builder.RegisterType<ReleasesRepository>().As<IReleasesRepository>();
-
-            IContainer container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            
         }
     }
 }
