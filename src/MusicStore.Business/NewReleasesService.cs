@@ -8,6 +8,13 @@ namespace MusicStore.Business
 {
     public class NewReleasesService : IAlbumsService
     {
+        private readonly IReleasesProvider _todayReleases;
+
+        public NewReleasesService(IReleasesProvider todayReleases)
+        {
+            _todayReleases = todayReleases;
+        }
+
         public List<AlbumDto> GetByDateReleases(DateTime date)
         {
             //var albums = repository.GetAlbums();
@@ -18,10 +25,10 @@ namespace MusicStore.Business
         public List<AlbumDto> LoadTodayReleases()
         {
             //IReleasesProvider todayReleases = new XmlProvider();
-            IReleasesProvider todayReleases = new JsonProvider();
+            //IReleasesProvider todayReleases = new JsonProvider();
 
             var listOfReleases = new List<AlbumDto>();
-            listOfReleases = todayReleases.GetTodayAlbums();
+            listOfReleases = _todayReleases.GetTodayAlbums();
 
             return listOfReleases;
         }

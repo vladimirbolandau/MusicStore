@@ -19,6 +19,16 @@ namespace MusicStore.Business.Providers
 
         private bool _fileExists;
 
+        private readonly IReleasesRepository _releasesRepository;
+
+        private readonly ICacheRepository _cacheRepository;
+
+        public JsonProvider(IReleasesRepository releasesRepository, ICacheRepository cacheRepository)
+        {
+            _releasesRepository = releasesRepository;
+            _cacheRepository = cacheRepository;
+        }
+
         public List<AlbumDto> GetTodayAlbums()
         {
             IEnumerable<JsonReleaseDto> jsonReleases = GetJsonReleases();
@@ -32,8 +42,8 @@ namespace MusicStore.Business.Providers
 
             if (!_fileExists)
             {
-                IReleasesRepository releasesRepository = new ReleasesRepository();
-                releasesRepository.Save(todayReleases);
+                //IReleasesRepository releasesRepository = new ReleasesRepository();
+                _releasesRepository.Save(todayReleases);
             }
 
             return todayReleases;
@@ -44,10 +54,10 @@ namespace MusicStore.Business.Providers
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Json);
 
-            ICacheRepository cacheRepository = new CacheRepository();
-            _fileExists = cacheRepository.DoesFileForTodayExists(path);
+            //ICacheRepository cacheRepository = new CacheRepository();
+            _fileExists = _cacheRepository.DoesFileForTodayExists(path);
             string json = GetJsonFile(_fileExists, path);
-            cacheRepository.ClearCacheIn(direct, path);
+            _cacheRepository.ClearCacheIn(direct, path);
 
             JObject jsonSearch = JObject.Parse(json);
             List<JToken> results = jsonSearch["feed"]["results"].Children().ToList();

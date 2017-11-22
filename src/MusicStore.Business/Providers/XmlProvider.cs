@@ -15,15 +15,25 @@ namespace MusicStore.Business.Providers
         private string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
             DataTransferType.Xml.ToString().ToLower());
 
+        private readonly IReleasesRepository _releasesRepository;
+
+        private readonly ICacheRepository _cacheRepository;
+
+        public XmlProvider(IReleasesRepository releasesRepository, ICacheRepository cacheRepository)
+        {
+            _releasesRepository = releasesRepository;
+            _cacheRepository = cacheRepository;
+        }
+
         public List<AlbumDto> GetTodayAlbums()
         {
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
 
-            ICacheRepository cacheRepository = new CacheRepository();
-            bool fileForTodayExists = cacheRepository.DoesFileForTodayExists(path);
+            //ICacheRepository cacheRepository = new CacheRepository();
+            bool fileForTodayExists = _cacheRepository.DoesFileForTodayExists(path);
             var xmlDoc = GetXmlFile(fileForTodayExists, path);
-            cacheRepository.ClearCacheIn(direct, path);
+            _cacheRepository.ClearCacheIn(direct, path);
 
             IEnumerable<XmlReleaseDto> xmlReleases = FillDisplayList(xmlDoc);
 
@@ -37,8 +47,8 @@ namespace MusicStore.Business.Providers
 
             if (!fileForTodayExists)
             {
-                IReleasesRepository releasesRepository = new ReleasesRepository();
-                releasesRepository.Save(todayReleases);
+                //IReleasesRepository releasesRepository = new ReleasesRepository();
+                _releasesRepository.Save(todayReleases);
             }
 
             return todayReleases;

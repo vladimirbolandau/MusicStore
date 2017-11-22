@@ -9,10 +9,10 @@ namespace MusicStore.Controllers
     {
         private readonly IAlbumsService _albumsService;
 
-        //public NewReleasesController(IAlbumsService albumsService)
-        //{
-        //    _albumsService = albumsService;
-        //}
+        public NewReleasesController(IAlbumsService albumsService)
+        {
+            _albumsService = albumsService;
+        }
 
         // GET: NewReleases
         public ActionResult Index()

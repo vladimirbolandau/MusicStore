@@ -1,5 +1,7 @@
 ﻿using MusicStore.Entities.Dto;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MusicStore.Models
 {
@@ -13,6 +15,9 @@ namespace MusicStore.Models
         public string UrlToAlbumArt { get; }
 
         public string AlbumLink { get; }
+
+        [DataType(DataType.Date)]
+        public DateTime ReleaseDate = DateTime.Today;
 
         public NewReleasesModel() { }
 
