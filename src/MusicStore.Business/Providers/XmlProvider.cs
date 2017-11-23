@@ -29,8 +29,7 @@ namespace MusicStore.Business.Providers
         {
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
-
-            //ICacheRepository cacheRepository = new CacheRepository();
+            
             bool fileForTodayExists = _cacheRepository.DoesFileForTodayExists(path);
             var xmlDoc = GetXmlFile(fileForTodayExists, path);
             _cacheRepository.ClearCacheIn(direct, path);
@@ -47,7 +46,6 @@ namespace MusicStore.Business.Providers
 
             if (!fileForTodayExists)
             {
-                //IReleasesRepository releasesRepository = new ReleasesRepository();
                 _releasesRepository.Save(todayReleases);
             }
 

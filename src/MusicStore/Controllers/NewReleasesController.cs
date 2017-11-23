@@ -17,7 +17,6 @@ namespace MusicStore.Controllers
         // GET: NewReleases
         public ActionResult Index()
         {
-            //IAlbumsService _albumsService = new NewReleasesService();
             var release = new NewReleasesModel();
             List<NewReleasesModel> releaseList = release.GetReleasesList(_albumsService.LoadTodayReleases());
             return View(releaseList);

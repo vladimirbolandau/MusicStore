@@ -24,9 +24,6 @@ namespace MusicStore.Business
 
         public List<AlbumDto> LoadTodayReleases()
         {
-            //IReleasesProvider todayReleases = new XmlProvider();
-            //IReleasesProvider todayReleases = new JsonProvider();
-
             var listOfReleases = new List<AlbumDto>();
             listOfReleases = _todayReleases.GetTodayAlbums();
 

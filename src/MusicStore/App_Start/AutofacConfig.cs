@@ -44,7 +44,7 @@ namespace MusicStore.App_Start
         private static void SetupDependencies(ContainerBuilder builder)
         {
             builder.RegisterType<NewReleasesService>().As<IAlbumsService>();
-            builder.RegisterType<XmlProvider>().As<IReleasesProvider>();
+            builder.RegisterType<JsonProvider>().As<IReleasesProvider>();
             builder.RegisterType<CacheRepository>().As<ICacheRepository>();
             builder.RegisterType<ReleasesRepository>().As<IReleasesRepository>();
 
