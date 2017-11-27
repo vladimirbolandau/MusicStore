@@ -6,13 +6,13 @@ using MusicStore.Business.Providers;
 
 namespace MusicStore.Business
 {
-    public class NewReleasesService : IAlbumsService
+    public class NewReleasesService : IReleasesService
     {
-        private readonly IReleasesProvider _todayReleases;
+        private readonly IReleasesProvider _releasesProvider;
 
-        public NewReleasesService(IReleasesProvider todayReleases)
+        public NewReleasesService(IReleasesProvider releasesProvider)
         {
-            _todayReleases = todayReleases;
+            _releasesProvider = releasesProvider;
         }
 
         public List<AlbumDto> GetByDateReleases(DateTime date)
@@ -25,7 +25,7 @@ namespace MusicStore.Business
         public List<AlbumDto> LoadTodayReleases()
         {
             var listOfReleases = new List<AlbumDto>();
-            listOfReleases = _todayReleases.GetTodayAlbums();
+            listOfReleases = _releasesProvider.GetTodayAlbums();
 
             return listOfReleases;
         }

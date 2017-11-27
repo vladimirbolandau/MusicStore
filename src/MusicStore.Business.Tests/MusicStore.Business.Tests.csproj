@@ -49,6 +49,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Web" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -65,11 +66,31 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Controllers\NewReleasesControllerTests.cs" />
     <Compile Include="Providers\JsonProviderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\NewReleasesServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MusicStore.Business\MusicStore.Business.csproj">
+      <Project>{F001219E-FF0F-4D01-A37B-EFA8ED61B969}</Project>
+      <Name>MusicStore.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicStore.Entities\MusicStore.Entities.csproj">
+      <Project>{ABB205D9-8C1E-4C10-B683-E79633552DAE}</Project>
+      <Name>MusicStore.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicStore.Repository\MusicStore.Repository.csproj">
+      <Project>{ca28a8f2-ed04-424b-9fb8-c8794eee7524}</Project>
+      <Name>MusicStore.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicStore\MusicStore.csproj">
+      <Project>{01E6F414-2274-45DD-899A-7576A8852387}</Project>
+      <Name>MusicStore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

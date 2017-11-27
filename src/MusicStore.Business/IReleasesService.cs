@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MusicStore.Business
 {
-    public interface IAlbumsService
+    public interface IReleasesService
     {
         List<AlbumDto> LoadTodayReleases();
         List<AlbumDto> GetByDateReleases(DateTime date);

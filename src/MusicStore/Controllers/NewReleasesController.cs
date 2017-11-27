@@ -7,9 +7,9 @@ namespace MusicStore.Controllers
 {
     public class NewReleasesController : Controller
     {
-        private readonly IAlbumsService _albumsService;
+        private readonly IReleasesService _albumsService;
 
-        public NewReleasesController(IAlbumsService albumsService)
+        public NewReleasesController(IReleasesService albumsService)
         {
             _albumsService = albumsService;
         }
