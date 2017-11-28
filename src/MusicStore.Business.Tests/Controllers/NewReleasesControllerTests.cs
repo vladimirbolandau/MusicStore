@@ -1,8 +1,10 @@
 ﻿using Moq;
+using MusicStore.Controllers;
 using MusicStore.Entities.Dto;
 using MusicStore.Models;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Web.Mvc;
 using System.Web.UI.WebControls;
 
 namespace MusicStore.Business.Tests.Controllers
@@ -27,9 +29,10 @@ namespace MusicStore.Business.Tests.Controllers
 
             // Act
             var actualResult = new NewReleasesModel().GetReleasesList(expectedResult);
+            var returningView = new NewReleasesController(_releasesServiceMock.Object).Index();
 
             // Assert
-            Assert.IsNotEmpty(actualResult);
+            Assert.NotNull(returningView);
         }
     }
 }
