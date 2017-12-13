@@ -29,7 +29,7 @@ namespace MusicStore.Models
             AlbumLink = album.AlbumLink;
         }
 
-        public List<NewReleasesModel> GetReleasesList(List<AlbumDto> albumsList)
+        public List<NewReleasesModel> ToViewModel(List<AlbumDto> albumsList)
         {
             List<NewReleasesModel> ReleasesList = new List<NewReleasesModel>();
             foreach (var album in albumsList)
@@ -38,6 +38,16 @@ namespace MusicStore.Models
                 ReleasesList.Add(tempRelease);
             }
             return ReleasesList;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is NewReleasesModel))
+            {
+                return false;
+            }
+
+            return ArtistName == ((NewReleasesModel)obj).ArtistName;
         }
     }
 }

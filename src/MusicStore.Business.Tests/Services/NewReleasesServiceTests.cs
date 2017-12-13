@@ -28,7 +28,8 @@ namespace MusicStore.Business.Tests.Services
             var actualResult = new NewReleasesService(_releasesProviderMock.Object).LoadTodayReleases();
 
             // Assert
-            Assert.IsNotEmpty(actualResult);
+            // Assert.IsNotEmpty(actualResult);
+            CollectionAssert.AreEquivalent(expectedResult, actualResult);
         }
     }
 }

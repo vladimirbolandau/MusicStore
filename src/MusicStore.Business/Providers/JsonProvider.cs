@@ -14,9 +14,6 @@ namespace MusicStore.Business.Providers
 {
     public class JsonProvider : IReleasesProvider
     {
-        private string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
-            DataTransferType.Json.ToString().ToLower());
-
         private bool _fileExists;
 
         private readonly IReleasesRepository _releasesRepository;
@@ -50,11 +47,19 @@ namespace MusicStore.Business.Providers
 
         private IEnumerable<JsonReleaseDto> GetJsonReleases()
         {
+            string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
+                DataTransferType.Json.ToString().ToLower());
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Json);
             
             _fileExists = _cacheRepository.DoesFileForTodayExists(path);
-            string json = GetJsonFile(_fileExists, path);
+            var cacheFile = new CacheFile();
+            if (!_fileExists)
+            {
+                cacheFile.CreateCacheFile(path, DataTransferType.Json);
+            }
+            string json = cacheFile.GetCacheFile(path);
+
             _cacheRepository.ClearCacheIn(direct, path);
 
             JObject jsonSearch = JObject.Parse(json);
@@ -64,24 +69,6 @@ namespace MusicStore.Business.Providers
                 var release = result.ToObject<JsonReleaseDto>();
                 yield return release;
             }
-        }
-
-        private string GetJsonFile(bool fileExists, string path)
-        {
-            string json = null;
-            if (!fileExists)
-            {
-                var jsonWeb = new WebClient()
-                    .DownloadString("https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.json");
-                byte[] data = Encoding.Default.GetBytes(jsonWeb);
-                json = Encoding.UTF8.GetString(data);
-                File.WriteAllText(path, json);
-            }
-            else
-            {
-                json = File.ReadAllText(path);
-            }
-            return json;
         }
     }
 }

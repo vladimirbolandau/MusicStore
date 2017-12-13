@@ -12,9 +12,6 @@ namespace MusicStore.Business.Providers
 {
     public class XmlProvider : IReleasesProvider
     {
-        private string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
-            DataTransferType.Xml.ToString().ToLower());
-
         private readonly IReleasesRepository _releasesRepository;
 
         private readonly ICacheRepository _cacheRepository;
@@ -27,13 +24,24 @@ namespace MusicStore.Business.Providers
 
         public List<AlbumDto> GetTodayAlbums()
         {
+            string direct = Path.Combine(WebConfigurationManager.AppSettings["CacheFolderPath"],
+                DataTransferType.Xml.ToString().ToLower());
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
             
             bool fileForTodayExists = _cacheRepository.DoesFileForTodayExists(path);
-            var xmlDoc = GetXmlFile(fileForTodayExists, path);
+
+            var cacheFile = new CacheFile();
+            if (!fileForTodayExists)
+            {
+                cacheFile.CreateCacheFile(path, DataTransferType.Xml);
+            }
+            var xmlDocInString = cacheFile.GetCacheFile(path);
+
             _cacheRepository.ClearCacheIn(direct, path);
 
+            var xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(xmlDocInString);
             IEnumerable<XmlReleaseDto> xmlReleases = FillDisplayList(xmlDoc);
 
             List<AlbumDto> todayReleases = new List<AlbumDto>();
@@ -88,23 +96,6 @@ namespace MusicStore.Business.Providers
                 yield return tempAttr;
             }
             // return displayList;
-        }
-
-        private XmlDocument GetXmlFile(bool fileForTodayExists, string path)
-        {
-            var xmlDoc = new XmlDocument();
-            if (!fileForTodayExists)
-            {
-                xmlDoc.Load("https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.rss");
-                var appleProvider = new AlbumArtForXml();
-                appleProvider.AddAlbumArtToXmlDoc(xmlDoc);
-                xmlDoc.Save(path);
-            }
-            else
-            {
-                xmlDoc.Load(path);
-            }
-            return xmlDoc;
         }
     }
 }

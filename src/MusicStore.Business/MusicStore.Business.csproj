@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\CacheFile.cs" />
     <Compile Include="IReleasesService.cs" />
     <Compile Include="Infrastructure\AlbumArtForXml.cs" />
     <Compile Include="Infrastructure\PathToCacheFile.cs" />

@@ -15,10 +15,10 @@ namespace MusicStore.Controllers
         }
 
         // GET: NewReleases
-        public ActionResult Index()
+        public ViewResult Index()
         {
             var release = new NewReleasesModel();
-            List<NewReleasesModel> releaseList = release.GetReleasesList(_albumsService.LoadTodayReleases());
+            List<NewReleasesModel> releaseList = release.ToViewModel(_albumsService.LoadTodayReleases());
             return View(releaseList);
         }
     }

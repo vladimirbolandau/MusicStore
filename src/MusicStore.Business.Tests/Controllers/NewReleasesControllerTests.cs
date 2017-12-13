@@ -18,21 +18,23 @@ namespace MusicStore.Business.Tests.Controllers
         public void Index_ReturnActionResult_ViewWithListOfNewReleasesModels()
         {
             // Arrange
-            var expectedResult = new List<AlbumDto>
+            var albumDtos = new List<AlbumDto>
             {
                 new AlbumDto
                 {
                     Name = "Name"
                 }
             };
-            _releasesServiceMock.Setup(m => m.LoadTodayReleases()).Returns(expectedResult);
+            _releasesServiceMock.Setup(m => m.LoadTodayReleases()).Returns(albumDtos);
+
+            var expectedResult = new NewReleasesModel().ToViewModel(albumDtos);
 
             // Act
-            var actualResult = new NewReleasesModel().GetReleasesList(expectedResult);
-            var returningView = new NewReleasesController(_releasesServiceMock.Object).Index();
+            var actualResult = new NewReleasesController(_releasesServiceMock.Object).Index();
 
             // Assert
-            Assert.NotNull(returningView);
+            CollectionAssert.AreEquivalent(expectedResult, actualResult.Model as List<NewReleasesModel>);
+            //Assert.NotNull(actualResult.Model);
         }
     }
 }
