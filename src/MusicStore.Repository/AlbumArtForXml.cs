@@ -2,7 +2,7 @@
 using System.Net;
 using System.Xml;
 
-namespace MusicStore.Business.Infrastructure
+namespace MusicStore.Repository
 {
     public class AlbumArtForXml
     {
@@ -36,8 +36,8 @@ namespace MusicStore.Business.Infrastructure
             {
                 imgDiv = html.DocumentNode.SelectSingleNode("//*[contains(@class,'artwork')]");
             }
-            var imgSrc = imgDiv.SelectSingleNode("//img/@src");
-            string AlbumArtUrl = imgSrc.GetAttributeValue("src", "");
+            var imgSrc = imgDiv.SelectNodes("//img/@src");// .SelectSingleNode("//img/@src");
+            string AlbumArtUrl = imgSrc[1].GetAttributeValue("src", "");
             return AlbumArtUrl;
         }
     }

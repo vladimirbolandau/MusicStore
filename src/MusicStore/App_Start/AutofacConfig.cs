@@ -47,7 +47,8 @@ namespace MusicStore.App_Start
             builder.RegisterType<JsonProvider>().As<IReleasesProvider>();
             builder.RegisterType<CacheRepository>().As<ICacheRepository>();
             builder.RegisterType<ReleasesRepository>().As<IReleasesRepository>();
-
+            builder.RegisterType<JsonRepository>().As<IJsonRepository>();
+            builder.RegisterType<XmlRepository>().As<IXmlRepository>();
         }
     }
 }

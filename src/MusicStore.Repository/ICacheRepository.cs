@@ -2,8 +2,12 @@
 {
     public interface ICacheRepository
     {
-        bool DoesFileForTodayExists(string path);
+        bool DoesFileExists(string path);
 
         void ClearCacheIn(string directory, string exceptFile);
+
+        string GetCacheFile(string path);
+
+        void CreateCacheFile(string path, string fileContents);
     }
 }

@@ -4,14 +4,9 @@ namespace MusicStore.Repository
 {
     public class CacheRepository : ICacheRepository
     {
-        public bool DoesFileForTodayExists(string path)
+        public bool DoesFileExists(string path)
         {
-            bool existence = true;
-            if (!File.Exists(path))
-            {
-                existence = false;
-            }
-            return existence;
+            return File.Exists(path);
         }
 
         public void ClearCacheIn(string directory, string exceptFile)
@@ -19,6 +14,18 @@ namespace MusicStore.Repository
             foreach (var file in Directory.GetFiles(directory))
                 if (file != exceptFile)
                     File.Delete(file);
+        }
+
+        public string GetCacheFile(string path)
+        {
+            string cacheFile = null;
+            cacheFile = File.ReadAllText(path);
+            return cacheFile;
+        }
+
+        public void CreateCacheFile(string path, string fileContents)
+        {
+            File.WriteAllText(path, fileContents);
         }
     }
 }

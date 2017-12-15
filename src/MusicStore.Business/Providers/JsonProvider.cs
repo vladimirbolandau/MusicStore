@@ -20,10 +20,13 @@ namespace MusicStore.Business.Providers
 
         private readonly ICacheRepository _cacheRepository;
 
-        public JsonProvider(IReleasesRepository releasesRepository, ICacheRepository cacheRepository)
+        private readonly IJsonRepository _jsonRepository;
+
+        public JsonProvider(IReleasesRepository releasesRepository, ICacheRepository cacheRepository, IJsonRepository jsonRepository)
         {
             _releasesRepository = releasesRepository;
             _cacheRepository = cacheRepository;
+            _jsonRepository = jsonRepository;
         }
 
         public List<AlbumDto> GetTodayAlbums()
@@ -52,14 +55,13 @@ namespace MusicStore.Business.Providers
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Json);
             
-            _fileExists = _cacheRepository.DoesFileForTodayExists(path);
-            var cacheFile = new CacheFile();
+            _fileExists = _cacheRepository.DoesFileExists(path);
             if (!_fileExists)
             {
-                cacheFile.CreateCacheFile(path, DataTransferType.Json);
+                var fileContents = _jsonRepository.LoadDataFromApi();
+                _cacheRepository.CreateCacheFile(path, fileContents);
             }
-            string json = cacheFile.GetCacheFile(path);
-
+            string json = _cacheRepository.GetCacheFile(path);
             _cacheRepository.ClearCacheIn(direct, path);
 
             JObject jsonSearch = JObject.Parse(json);

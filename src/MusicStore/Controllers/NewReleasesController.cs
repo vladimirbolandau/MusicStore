@@ -2,6 +2,7 @@
 using MusicStore.Business;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using MusicStore.Entities.Dto;
 
 namespace MusicStore.Controllers
 {
@@ -17,9 +18,18 @@ namespace MusicStore.Controllers
         // GET: NewReleases
         public ViewResult Index()
         {
-            var release = new NewReleasesModel();
-            List<NewReleasesModel> releaseList = release.ToViewModel(_albumsService.LoadTodayReleases());
-            return View(releaseList);
+            return View(ToViewModel(_albumsService.LoadTodayReleases()));
+        }
+
+        public List<NewReleasesModel> ToViewModel(List<AlbumDto> albumsList)
+        {
+            List<NewReleasesModel> ReleasesList = new List<NewReleasesModel>();
+            foreach (var album in albumsList)
+            {
+                NewReleasesModel tempRelease = new NewReleasesModel(album);
+                ReleasesList.Add(tempRelease);
+            }
+            return ReleasesList;
         }
     }
 }

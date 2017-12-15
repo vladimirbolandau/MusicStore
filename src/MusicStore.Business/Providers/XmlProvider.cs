@@ -16,10 +16,13 @@ namespace MusicStore.Business.Providers
 
         private readonly ICacheRepository _cacheRepository;
 
-        public XmlProvider(IReleasesRepository releasesRepository, ICacheRepository cacheRepository)
+        private readonly IXmlRepository _xmlRepository;
+
+        public XmlProvider(IReleasesRepository releasesRepository, ICacheRepository cacheRepository, IXmlRepository xmlRepository)
         {
             _releasesRepository = releasesRepository;
             _cacheRepository = cacheRepository;
+            _xmlRepository = xmlRepository;
         }
 
         public List<AlbumDto> GetTodayAlbums()
@@ -29,15 +32,13 @@ namespace MusicStore.Business.Providers
             var pathToCache = new PathToCacheFile();
             string path = pathToCache.GetFilePath(direct, DataTransferType.Xml);
             
-            bool fileForTodayExists = _cacheRepository.DoesFileForTodayExists(path);
-
-            var cacheFile = new CacheFile();
+            bool fileForTodayExists = _cacheRepository.DoesFileExists(path);
             if (!fileForTodayExists)
             {
-                cacheFile.CreateCacheFile(path, DataTransferType.Xml);
+                var fileContents = _xmlRepository.LoadDataFromApi();
+                _cacheRepository.CreateCacheFile(path, fileContents);
             }
-            var xmlDocInString = cacheFile.GetCacheFile(path);
-
+            var xmlDocInString = _cacheRepository.GetCacheFile(path);
             _cacheRepository.ClearCacheIn(direct, path);
 
             var xmlDoc = new XmlDocument();

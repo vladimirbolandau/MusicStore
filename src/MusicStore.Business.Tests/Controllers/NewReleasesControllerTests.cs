@@ -27,7 +27,7 @@ namespace MusicStore.Business.Tests.Controllers
             };
             _releasesServiceMock.Setup(m => m.LoadTodayReleases()).Returns(albumDtos);
 
-            var expectedResult = new NewReleasesModel().ToViewModel(albumDtos);
+            //var expectedResult = new NewReleasesModel().ToViewModel(albumDtos);
 
             // Act
             var actualResult = new NewReleasesController(_releasesServiceMock.Object).Index();
