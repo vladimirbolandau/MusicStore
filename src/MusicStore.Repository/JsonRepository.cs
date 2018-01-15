@@ -5,7 +5,7 @@ namespace MusicStore.Repository
 {
     public class JsonRepository : IJsonRepository
     {
-        public string LoadDataFromApi()
+        public string LoadDataFromApi() //Load JSON File
         {
             string json = null;
             var jsonWeb = new WebClient()

@@ -298,3 +298,4 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 src/MusicStore/Cache/json/TodayReleases.2018.01.05.jsonsrc/MusicStore/Cache/json/TodayReleases.2017.12.15.json
+src/MusicStore/Cache/

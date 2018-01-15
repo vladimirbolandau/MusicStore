@@ -55,7 +55,8 @@ namespace MusicStore.Business.Providers
 
             if (!fileForTodayExists)
             {
-                _releasesRepository.Save(todayReleases);
+                //DB was lost
+                //_releasesRepository.Save(todayReleases);
             }
 
             return todayReleases;
