@@ -7,9 +7,6 @@ namespace MusicStore.Repository
     {
         public string LoadDataFromApi()
         {
-            //This is a git test
-            //Master, master
-            //The End
             string json = null;
             var jsonWeb = new WebClient()
                 .DownloadString("https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/50/explicit.json");
@@ -19,5 +16,4 @@ namespace MusicStore.Repository
         }
     }
 }
-//New Branch commit
-//continue 
+//New Test
